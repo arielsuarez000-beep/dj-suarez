@@ -1,0 +1,1305 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#080c13">
+<title>DJ SUAREZ · EXPERIMENTO CORTE PRO</title>
+<style>
+:root{--bg:#080c13;--panel:#111a27;--panel2:#172438;--line:#2a3a50;--text:#f4f7fc;--muted:#9eafc5;--cyan:#36d8e9;--lime:#c7f36b;--pink:#ff4d86;--orange:#ffb45b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#20354d 0,transparent 48%),var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}header{position:sticky;top:0;z-index:5;background:#080c13ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:13px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{font-weight:950;letter-spacing:.07em;font-size:19px}.brand span{color:var(--cyan)}.subtitle{font-size:10px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase}.status{font-size:10px;font-weight:900;letter-spacing:.08em;color:var(--lime);border:1px solid #536c39;border-radius:99px;padding:6px 9px}main{max-width:950px;margin:auto;padding:15px 12px 38px}.hero{padding:21px 18px;border-radius:20px;background:linear-gradient(135deg,#172b3e,#101724 70%);border:1px solid #30465b;margin-bottom:13px}.eyebrow{font-size:10px;color:var(--cyan);letter-spacing:.18em;font-weight:900;text-transform:uppercase}.hero h1{font-size:clamp(28px,8vw,43px);line-height:1.02;margin:9px 0}.hero p{color:var(--muted);margin:10px 0 17px}.btn{border:1px solid var(--line);border-radius:12px;padding:11px 13px;background:#202e41;color:var(--text);font-weight:800;cursor:pointer;min-height:42px}.btn:active{transform:scale(.98)}.primary{background:var(--cyan);border-color:var(--cyan);color:#061117}.lime{background:var(--lime);border-color:var(--lime);color:#111608}.danger{border-color:#76344d;color:#ff9bb9;background:#291421}.actions{display:flex;gap:8px;flex-wrap:wrap}.actions .btn{flex:1}.panel{padding:16px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#141f2e,#0f1621);margin-bottom:13px;min-width:0}.panel h2{font-size:16px;margin:5px 0 13px}.hint{font-size:12px;color:var(--muted);margin:10px 0 0}.folderbtn{width:100%;margin-top:10px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}.metric{background:#0a111b;border:1px solid #26364a;border-radius:12px;padding:11px}.metric .val{font-size:23px;font-weight:900;color:var(--cyan)}.metric .label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.09em}.trackrow{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:9px;align-items:center;padding:10px 8px;border-radius:11px;background:#0b121c;border:1px solid transparent;margin-bottom:7px}.trackrow.active{border-color:var(--cyan);background:#102431}.trackno{color:var(--cyan);font-weight:900}.trackname{font-size:13px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.trackmeta{font-size:10px;color:var(--muted)}.tinybtn{padding:7px 9px;min-height:34px}.empty{padding:19px;text-align:center;border:1px dashed var(--line);border-radius:12px;color:var(--muted)}.now{display:flex;gap:13px;align-items:center}.disc{width:68px;height:68px;flex:none;border:7px solid #2a3b50;border-radius:50%;display:grid;place-items:center;background:repeating-radial-gradient(circle,#0d1420 0 3px,#2b3a4c 4px 5px)}.disc i{width:17px;height:17px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px #36d8e988}.nowtitle{font-size:17px;font-weight:900;overflow-wrap:anywhere}.progress{height:7px;border-radius:99px;background:#2a3749;overflow:hidden;margin:15px 0 6px}.progress div{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--lime))}.times{display:flex;justify-content:space-between;color:var(--muted);font-size:11px}.rangebox{background:#0b121c;border:1px solid #28394c;border-radius:12px;padding:11px;margin-bottom:9px}.rangebox label{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;gap:10px}.rangebox input[type=range]{width:100%;accent-color:var(--cyan);margin:10px 0 0}.switchline{display:flex;align-items:center;gap:9px;color:var(--muted);padding:7px 0;font-size:13px}.switchline input{accent-color:var(--lime);width:17px;height:17px}.instrumentgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.pad{min-height:68px;background:#0a1420;border:1px solid #2a4055;border-radius:13px;color:var(--text);font-weight:900}.pad span{display:block;font-size:10px;color:var(--muted);font-weight:600}.pad:active,.pad.on{background:#173747;border-color:var(--cyan)}.historyitem{padding:10px 2px;border-bottom:1px solid var(--line)}.historyitem strong{display:block;overflow-wrap:anywhere;font-size:12px}.historyitem span{font-size:10px;color:var(--muted)}.foot{color:#778ba2;font-size:10px;text-align:center;padding:12px}.warning{background:#241c12;border:1px solid #574126;color:#f6c88b;padding:11px;border-radius:12px;font-size:11px;margin-top:12px}
+@media(min-width:760px){main{padding:24px}.columns{display:grid;grid-template-columns:1.1fr .9fr;gap:13px;align-items:start}.hero{padding:27px}.panel{padding:19px}}
+</style>
+</head>
+<body>
+<header><div><div class="brand">AUTO<span>DJ</span> AI</div><div class="subtitle">DJ SUAREZ · V15.5 DRIVE · MEMORIA INTELIGENTE</div></div><div class="status" id="status">LISTO</div></header>
+<main>
+<section class="hero"><div class="eyebrow">Tu música · Tu sesión</div><h1>Elegí la carpeta.<br><span style="color:var(--cyan)">Dejá mezclar al DJ.</span></h1><p>Biblioteca por carpetas, análisis de ritmo, loops, efectos y herramientas para controlar tu sesión.</p><div class="actions"><button class="btn primary" id="chooseFolder">＋ Cargar carpeta</button><button class="btn" id="chooseFiles">Agregar temas sueltos</button></div><div style="margin:12px 0 8px"><label for="folderNameInput">Nombre de carpeta / género para los temas sueltos</label><input id="folderNameInput" type="text" list="folderNameSuggestions" placeholder="Ej.: Cumbia, Cuarteto, Reguetón" style="display:block;width:100%;margin-top:6px;padding:11px;background:#0a111b;color:var(--text);border:1px solid #26364a;border-radius:9px;box-sizing:border-box"><datalist id="folderNameSuggestions"></datalist><p class="hint">Escribí una carpeta y tocá «Agregar temas sueltos». Si dejás el campo vacío, se usa la carpeta seleccionada.</p></div><input id="folderInput" type="file" webkitdirectory directory multiple accept="audio/*" hidden><input id="fileInput" type="file" multiple accept="audio/*" hidden><div class="hint" id="libraryInfo">La biblioteca se guarda en este navegador al usar Netlify (HTTPS). Si abrís el HTML como archivo local, el guardado permanente puede no funcionar.</div></section>
+<section class="panel" id="drivePanel"><div class="eyebrow">V15.4 / GOOGLE DRIVE</div><h2>☁️ DJ SUAREZ · DRIVE MUSIC</h2><p class="hint">Explorá tus carpetas en Drive sin importar toda la música. Elegí una carpeta para Auto DJ. El sistema incorpora canciones por lotes mientras seguís escuchando. No se guardan en la biblioteca permanente.</p><div class="actions" style="margin-top:12px"><button class="btn primary" id="driveConnect" type="button">☁️ Conectar Google Drive</button><button class="btn" id="driveDisconnect" type="button" disabled>Desconectar</button></div><p class="hint" id="driveStatus" role="status">Sin conectar. Usá la misma cuenta donde guardás la música.</p><div class="actions" style="margin-top:10px"><button class="btn" id="driveBack" type="button" disabled>← Volver</button><button class="btn" id="driveRoot" type="button" disabled>⌂ Mi unidad</button><button class="btn" id="driveShared" type="button" disabled>👥 Compartido conmigo</button></div><div class="actions" style="margin-top:10px"><button class="btn primary" id="driveAutoImport" type="button" disabled>🎚️ Iniciar carga continua para Auto DJ</button></div><p class="hint" id="driveAutoInfo">Abrí una carpeta y tocá iniciar. Se preparan 15 canciones inicialmente; después se agrega una nueva mientras se liberan las ya mezcladas.</p><div class="trackmeta" id="drivePath" style="margin:10px 0">Mi unidad</div><div id="driveItems"><div class="empty">Conectá Drive para explorar tus carpetas.</div></div><button class="btn folderbtn" id="driveMore" type="button" hidden>Cargar más archivos</button><div class="rangebox" style="margin-top:12px"><strong>🎧 Escucha de prueba desde Drive</strong><audio id="drivePreview" controls preload="none" style="width:100%;margin-top:8px"></audio><p class="hint" id="drivePreviewInfo">Tocá ▶ en una canción para escucharla. Se descarga temporalmente solo ese archivo; no se guarda en la biblioteca.</p></div></section>
+<div class="columns"><div>
+<section class="panel"><div class="eyebrow">01 / Deck principal</div><h2>Sonando ahora</h2><div class="now"><div class="disc"><i></i></div><div style="min-width:0"><div class="nowtitle" id="currentTitle">Cargá tu música</div><div class="trackmeta" id="currentMeta">Esperando el primer tema</div><div class="trackmeta" id="analysisLabel">Análisis: pendiente</div></div></div><div class="progress"><div id="progress"></div></div><div class="times"><span id="elapsed">00:00</span><span id="duration">00:00</span></div><div class="actions" style="margin-top:9px"><button class="btn" id="back10Btn" type="button">↶ 10 segundos</button><button class="btn" id="forward10Btn" type="button">10 segundos ↷</button></div><div class="actions" style="margin-top:13px"><button class="btn lime" id="autoBtn">▶ Auto DJ</button><button class="btn" id="playBtn">▶ Play</button></div><div class="actions" style="margin-top:8px"><button class="btn" id="prevBtn">⏮ Anterior</button><button class="btn" id="nextBtn">Mezclar siguiente ⏭</button></div><div class="grid2" style="margin-top:12px"><div class="metric"><div class="val" id="bpmVal">—</div><div class="label">BPM estimados</div></div><div class="metric"><div class="val" id="keyVal">—</div><div class="label">Compás / beat</div></div></div><div class="panel" style="margin-top:15px;border-color:#36d8e9"><div class="eyebrow">LAB / PRUEBA INDEPENDIENTE</div><h2>🧠 V14.5 ORGANIC FADE · Laboratorio</h2><label class="switchline"><input id="hardCutMode" type="checkbox"> Activar Organic Mix (espera el momento musical)</label><div class="actions" style="align-items:center;flex-wrap:wrap">
+<label for="proPhraseBars">Frase musical:</label>
+<select id="proPhraseBars" style="padding:9px;border-radius:8px;background:#13283b;color:white">
+<option value="4">4 compases</option><option value="8" selected>8 compases</option><option value="16">16 compases</option>
+</select>
+<label for="proRepeatPhrase"><input id="proRepeatPhrase" type="checkbox" disabled> Repetir frase (desactivado en Organic Mix)</label>
+</div><div class="actions"><button class="btn primary" id="testHardCut" type="button">🎧 Buscar enganche automáticamente</button></div><p class="hint" id="hardCutInfo">Organic Mix espera una salida musical estimada y prepara la entrada. Si no hay confianza, deja sonar el tema.</p></div><p class="hint" id="mixMessage">El análisis es una estimación local; escuchá la transición y ajustala si hace falta.</p></section>
+<section class="panel"><div class="eyebrow">02 / Biblioteca</div><h2>Temas cargados · ▶ reproducir ahora / ⏭ elegir próximo <span class="trackmeta" id="count"></span></h2><div class="rangebox"><label for="genreFilter"><span>Filtrar género</span><b id="genreCount">Todos</b></label><select id="genreFilter" style="width:100%;margin-top:8px;background:#0a111b;color:var(--text);border:1px solid #26364a;border-radius:9px;padding:10px"><option value="todos">Todos</option><option value="cumbia">Cumbia</option><option value="cuarteto">Cuarteto</option><option value="regueton">Reguetón</option><option value="otros">Sin identificar</option></select></div><div class="rangebox"><label for="folderScope"><span>Carpeta para Auto DJ</span><b id="scopeCount">—</b></label><select id="folderScope" style="width:100%;margin-top:8px;background:#0a111b;color:var(--text);border:1px solid #26364a;border-radius:9px;padding:10px"><option value="all">Toda la biblioteca</option></select><p class="hint">Auto DJ solo elegirá temas de esta carpeta. Los temas sueltos se incorporan a ella sin crear otra carpeta. El filtro de género solo cambia la lista visible.</p></div><div id="playlist"><div class="empty">Elegí una carpeta de música para empezar.</div></div></section>
+</div><div>
+<section class="panel"><div class="eyebrow">ESTUDIO DJ V11.3 · EFECTOS CREATIVOS SEGUROS</div><h2>Remix y grabación</h2><div class="actions"><button class="btn" id="remixBtn" aria-pressed="false">🎛️ Remix: OFF</button><button class="btn danger" id="recBtn">⏺ Grabar mezcla</button></div><div class="rangebox"><label for="remixIntensity"><span>Intensidad Auto Remix</span><b id="remixIntensityLabel">Suave</b></label><select id="remixIntensity" style="width:100%;margin-top:8px;background:#0a111b;color:var(--text);border:1px solid #26364a;border-radius:9px;padding:10px"><option value="suave" selected>Suave · 1 compás</option><option value="medio">Medio · 2 compases</option><option value="fiesta">Fiesta · 4 compases</option></select><p class="hint">Solo aplica un loop por canción cuando el pulso es confiable y existe una zona suave suficiente. No separa voces de instrumentos.</p></div><label class="switchline"><input type="checkbox" id="creativeFX" checked> Efectos creativos automáticos (suaves y protegidos)</label><div class="rangebox"><label for="creativeFXMode"><span>Estilo de efectos</span><b id="creativeFXLabel">Suave</b></label><select id="creativeFXMode" style="width:100%;margin-top:8px;background:#0a111b;color:var(--text);border:1px solid #26364a;border-radius:9px;padding:10px"><option value="suave" selected>Suave · filtro de salida</option><option value="medio">Medio · filtro y eco discreto</option><option value="fiesta">Fiesta · filtro y eco algo más marcado</option></select><p class="hint" id="creativeFXStatus">Los efectos solo actúan sobre el tema que sale, durante el final de una transición. Si no hay suficiente margen, se omiten. Desactivá el control para escuchar exactamente el motor de mezclas anterior.</p></div><label class="switchline"><input type="checkbox" id="autonomousRemix" checked> DJ autónomo seguro: limitar remixes y priorizar continuidad</label><p class="hint" id="autonomousStatus">Modo seguro activo: máximo un loop cada 3 canciones, únicamente con análisis confiable. Si hay dudas, mezcla normal.</p><p class="hint" id="recInfo">Remix desactivado. La grabación captura el audio mezclado de la aplicación, sin micrófono. Formato WebM cuando el navegador lo admite.</p><p class="hint">V11.0: Remix protegido con enfriamiento entre canciones y modo autónomo. V10.4: Remix con duración seleccionable por compases, un solo loop por canción y protección de confianza rítmica. Si no hay zona adecuada, no aplica loops. No detecta voces: si no hay suficiente certeza, no altera la canción.</p></section><section class="panel"><div class="eyebrow">ANÁLISIS / V8</div><h2>Mapa musical y pulsos</h2><p class="hint" id="sectionInfo">Elegí una canción y esperá el análisis. Se estiman zonas de baja y alta energía; se estima también la regularidad de pulsos; no se detectan voces ni melodías por separado. V9.3 estima introducción y final suave por energía.</p></section><section class="panel"><div class="eyebrow">DJ INTELIGENTE / V9.4</div><h2>Próximas canciones</h2><p class="hint">Plan de hasta 5 temas en la carpeta elegida. Fiesta prioriza continuidad de ritmo y energía. La lista se actualiza cuando cambia la canción, el análisis o los ajustes; no altera el sonido.</p><div class="actions"><button class="btn" id="refreshPlan">↻ Actualizar selección</button></div><div id="upcomingList" class="history"><div class="empty">Cargá canciones para ver la próxima selección.</div></div><p class="hint" id="planInfo">Planificación disponible después de elegir una canción.</p></section><section class="panel"><div class="eyebrow">DJ INTELIGENTE / V10.2.1</div><h2>¿Qué está preparando AutoDJ?</h2><p class="hint">Vista previa de la decisión actual. No modifica el motor de sonido probado en V10.1. Las estimaciones dependen del análisis disponible y del género reconocido en el nombre del archivo.</p><p class="hint" id="preanalysisStatus">Análisis anticipado: esperando reproducción.</p><div id="decisionPanel" class="history"><div class="empty">Elegí una canción para ver la próxima transición.</div></div><div class="actions"><button class="btn" id="refreshDecision">↻ Revisar decisión</button></div><p class="hint" id="decisionStatus">Sin cambios en el audio.</p></section><section class="panel"><div class="eyebrow">03 / Mezcla inteligente</div><h2>Ajustes de transición</h2><p class="hint">V10.1: recordá ajustes por género. Sin preferencias guardadas, con modo automático, dos cumbias se preparan 9 s antes del final y conservan el cruce corto protegido. Los demás géneros mantienen su transición anterior.</p><div class="rangebox"><label><span>Fundido</span><b id="fadeText">8 s</b></label><input type="range" min="2" max="16" value="8" id="fade"></div><div class="rangebox"><label for="earlyMix"><span>Comenzar mezcla antes del final</span><b id="earlyMixText">22 s (otros géneros)</b></label><input type="range" min="8" max="25" step="1" value="22" id="earlyMix"><p class="hint">Mezcla corta y limpia: evita superponer melodías durante demasiado tiempo.</p></div><div class="rangebox"><label><span>Volumen</span><b id="volumeText">85%</b></label><input type="range" min="0" max="100" value="85" id="volume"></div><label class="switchline"><input type="checkbox" id="structureMix" checked> Preferir zonas de menor energía al entrar (experimental)</label><p class="hint" id="structureInfo">V9.3: estima introducción y final mediante cambios de energía. No identifica voces ni estribillos con certeza; solo ajusta hasta 2 segundos el inicio del cruce.</p><label class="switchline"><input type="checkbox" id="phraseMix" checked> Priorizar entradas en bloques musicales (experimental)</label><p class="hint" id="phraseInfo">Intenta iniciar el cruce cerca de bloques de 16 o 32 pulsos. Si el análisis no es confiable, conserva el comportamiento anterior.</p><label class="switchline"><input type="checkbox" id="beatSync" checked> Sincronizar pulsos al entrar (experimental)</label><p class="hint">Alinea las rejillas de pulsos estimadas cuando ambos análisis son confiables. No identifica todavía el primer tiempo del compás.</p><label class="switchline"><input type="checkbox" id="adaptiveTransition" checked> Duración automática según género (V10.0)</label><div class="rangebox"><label><span>Aprendizaje de transiciones por género</span><b id="learnGenreLabel">Sin ajustes guardados</b></label><p class="hint">Guardá el valor de «Comenzar mezcla antes del final» para el género que estás escuchando. Se aplicará en futuras mezclas del mismo género cuando esté activada la duración automática. No cambia el sonido ni la duración del fundido.</p><div class="actions"><button class="btn" id="saveGenreMix">💾 Recordar ajuste actual</button><button class="btn" id="clearGenreMix">↺ Borrar ajustes aprendidos</button></div><p class="hint" id="learnGenreInfo">El ajuste se guarda solamente en este navegador.</p></div><p class="hint" id="adaptiveInfo">Cumbia → entrada anticipada 9 s y cruce breve protegido. Otros ritmos → ajuste anterior. Desactivá para controlar manualmente los tiempos.</p><label class="switchline"><input type="checkbox" id="cumbiaProtect" checked> Protección de percusión en cumbia (V9.9)</label><p class="hint">Para dos temas identificados como cumbia, reduce el tiempo en que suenan las dos bases y hace un intercambio de graves. Si los archivos no tienen género reconocible, no se aplica.</p><label class="switchline"><input type="checkbox" id="autoEQ" checked> EQ automático suave durante transiciones</label><p class="hint">Reduce temporalmente graves y agudos del tema entrante; vuelve a tus ajustes al terminar. Desactivable si no te gusta.</p><div class="rangebox"><label><span>Graves</span><b id="bassText">0 dB</b></label><input type="range" min="-12" max="12" value="0" id="bass"></div><div class="rangebox"><label><span>Agudos</span><b id="trebleText">0 dB</b></label><input type="range" min="-12" max="12" value="0" id="treble"></div><div class="rangebox"><label for="djSelectionMode"><span>Estilo de selección musical</span><b id="djSelectionLabel">Fiesta</b></label><select id="djSelectionMode" style="width:100%;margin-top:8px;background:#0a111b;color:var(--text);border:1px solid #26364a;border-radius:9px;padding:10px"><option value="fiesta" selected>Fiesta · continuidad y energía alta</option><option value="equilibrado">Equilibrado · variedad natural</option><option value="progresivo">Progresivo · intensidad creciente</option></select><p class="hint">V9.1: alineación experimental de rejillas de pulsos con análisis confiable. V9.0: análisis de pulsos estimados para mejorar compatibilidad. V8.4: orden más natural, cambios de energía graduales, evita repetir artistas reconocibles y recupera temas antiguos cuando se agota la lista. No modifica el sonido.</p></div><label class="switchline"><input type="checkbox" id="shuffle"> Orden aleatorio dentro de la carpeta</label><label class="switchline"><input type="checkbox" id="bpmMatch" checked> Priorizar temas de ritmo compatible</label><div class="rangebox"><label for="noRepeat"><span>No repetir temas durante</span><b>En esta sesión</b></label><select id="noRepeat" style="width:100%;margin-top:8px;background:#0a111b;color:var(--text);border:1px solid #26364a;border-radius:9px;padding:10px"><option value="5">Últimos 5 temas</option><option value="10" selected>Últimos 10 temas</option><option value="15">Últimos 15 temas</option><option value="20">Últimos 20 temas</option></select></div><label class="switchline"><input type="checkbox" id="beatLoop" checked> Alinear loops al beat estimado</label><label class="switchline"><input type="checkbox" id="repeat"> Repetir tema actual</label><div class="warning">AutoDJ usa BPM estimados para elegir y ajustar la velocidad dentro de un margen seguro. La clasificación de género usa nombres y carpetas; energía y BPM son aproximados. V5 aproxima el inicio de mezcla a bloques de 8 tiempos y guarda BPM estimados localmente cuando el navegador lo permite. La detección de frases no es aún semántica. V4 respeta la carpeta seleccionada. V3 suaviza las frecuencias medias durante el cruce para reducir choques de melodías, pero no separa instrumentos. La separación automática de voz e instrumentos necesita un modelo de audio adicional y no está activa en esta versión.</div></section>
+<section class="panel"><div class="eyebrow">04 / Corte de voz y propaganda</div><h2>Saltar un fragmento hablado</h2><p class="hint">Marcá el inicio y el final de la voz del DJ o la propaganda mientras escuchás el tema. AutoDJ saltará ese fragmento al llegar a ese punto. Se configura para la canción actual.</p><div class="grid2"><div class="rangebox"><label><span>Inicio del corte</span><b id="cutStartText">0.0 s</b></label><input type="range" min="0" max="600" value="0" step="0.1" id="cutStart"></div><div class="rangebox"><label><span>Final del corte</span><b id="cutEndText">0.0 s</b></label><input type="range" min="0" max="600" value="0" step="0.1" id="cutEnd"></div></div><div class="actions"><button class="btn" id="markCutStart">Marcar inicio aquí</button><button class="btn" id="markCutEnd">Marcar final aquí</button></div><label class="switchline"><input type="checkbox" id="cutEnabled"> Activar salto de voz / propaganda</label><button class="btn" id="clearCut" style="width:100%">Borrar corte</button><p class="hint">Este modo no reconoce automáticamente la voz: vos marcás el fragmento una vez. La detección automática fiable de voz requiere un modelo de audio adicional.</p></section>
+<section class="panel"><div class="eyebrow">05 / Loops y estrofas</div><h2>Repetir una sección</h2><div class="grid2"><div class="rangebox"><label><span>Inicio (segundos)</span><b id="loopStartText">0.0</b></label><input type="range" min="0" max="60" value="0" step=".1" id="loopStart"></div><div class="rangebox"><label><span>Final (segundos)</span><b id="loopEndText">8.0</b></label><input type="range" min="1" max="90" value="8" step=".1" id="loopEnd"></div></div><div class="actions"><button class="btn" id="setStart">Marcar inicio aquí</button><button class="btn" id="setEnd">Marcar final aquí</button></div><div class="actions" style="margin-top:8px"><button class="btn primary" id="loopBtn">⟲ Activar loop</button><button class="btn" id="loopOff">Desactivar</button></div><p class="hint">Los loops por segundos sirven como herramienta básica. El loop perfectamente alineado a compases depende de que el BPM se detecte bien.</p></section>
+<section class="panel"><div class="eyebrow">06 / Instrumentos y FX</div><h2>Pads de percusión</h2><div class="instrumentgrid"><button class="pad" data-sound="kick">🥁 Bombo<span>Kick</span></button><button class="pad" data-sound="snare">🪘 Caja<span>Snare</span></button><button class="pad" data-sound="hat">✨ Hi-hat<span>Platillo</span></button><button class="pad" data-sound="clap">👏 Palmas<span>Clap</span></button><button class="pad" data-sound="tom">🪘 Tom<span>Tom grave</span></button><button class="pad" data-sound="cowbell">🔔 Campana<span>Cowbell</span></button></div><div class="rangebox" style="margin-top:10px"><label><span>Volumen de pads</span><b id="padVolText">35%</b></label><input type="range" min="0" max="100" value="35" id="padVol"></div><p class="hint">Sonidos sintetizados básicos para practicar y sumar golpes. No son stems originales ni instrumentos extraídos de la canción.</p></section>
+<section class="panel"><div class="eyebrow">07 / Historial</div><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h2>Sesión reciente</h2><button class="btn tinybtn" id="clearHistory">Borrar</button></div><div id="history"><div class="empty">Los temas reproducidos aparecerán aquí.</div></div></section>
+</div></div><div class="foot">AUTO DJ AI · Prototipo web local para Android · Tus archivos no se envían a un servidor.</div>
+</main>
+<audio id="audio" preload="metadata"></audio><audio id="audio2" preload="metadata"></audio>
+<script>
+const $=id=>document.getElementById(id);
+const decks=[$('audio'),$('audio2')];
+let tracks=[], current=-1, autoDJ=false, loopOn=false, loopA=0, loopB=8, historyList=[], loadingLibrary=false, sessionPlayed=[];
+let folderSerial=0;
+let requestedNextTrack=null;
+let remixMode=false, remixUsedTrack=null, remixLoopState=null, lastAutonomousRemixSong=-999, autonomousSongNumber=0, autonomousTrack=null, recording=null, recordingChunks=[], recordDest=null, recordStarted=0;
+let ctx=null, nodes=[], masterCompressor=null, masterLimiter=null, masterMakeup=null, activeDeck=0, transition=null, transitionTimer=null, lastAutoAdvance=0, analysisBusy=false;
+let preparedTrack=-1, preparingMix=false, preparationTimer=null;
+function detectGenre(name){const n=name.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();if(/cumbia|villera|santafesina|sonora|rafaga|amar azul|los palmeras/.test(n))return 'cumbia';if(/cuarteto|la mona|rodrigo|ulises bueno|q lokura|desakta2|luck ra|banda xxi/.test(n))return 'cuarteto';if(/regga?eton|regueton|perreo|daddy yankee|bad bunny|don omar|karol g|wisin|yandel/.test(n))return 'regueton';return 'otros'}
+const genreNames={cumbia:'Cumbia',cuarteto:'Cuarteto',regueton:'Reguetón',otros:'Sin identificar'};
+const supported=/\.(mp3|wav|m4a|aac|ogg|opus|flac|webm|mp4)$/i;
+function fmt(n){if(!isFinite(n)||n<0)return'00:00';return String(Math.floor(n/60)).padStart(2,'0')+':'+String(Math.floor(n%60)).padStart(2,'0')}
+function status(s){$('status').textContent=s}
+function audioGraph(){
+ if(ctx)return;
+ const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+ ctx=new AC();
+ if(ctx.createMediaStreamDestination){recordDest=ctx.createMediaStreamDestination()}
+ // Un solo bus de salida, compartido por los dos decks y la grabación.
+ // Compresión suave + limitación final: evita sumar dos temas directamente a los parlantes.
+ masterCompressor=ctx.createDynamicsCompressor();
+ masterCompressor.threshold.value=-16;masterCompressor.knee.value=12;
+ masterCompressor.ratio.value=2.5;masterCompressor.attack.value=.008;masterCompressor.release.value=.22;
+ masterMakeup=ctx.createGain();masterMakeup.gain.value=1.12;
+ masterLimiter=ctx.createDynamicsCompressor();masterLimiter.threshold.value=-3;
+ masterLimiter.knee.value=0;masterLimiter.ratio.value=18;
+ masterLimiter.attack.value=.002;masterLimiter.release.value=.10;
+ masterCompressor.connect(masterMakeup);masterMakeup.connect(masterLimiter);
+ masterLimiter.connect(ctx.destination);if(recordDest)masterLimiter.connect(recordDest);
+ nodes=decks.map(el=>{const source=ctx.createMediaElementSource(el), bass=ctx.createBiquadFilter(), treble=ctx.createBiquadFilter(), gain=ctx.createGain();bass.type='lowshelf';bass.frequency.value=180;treble.type='highshelf';treble.frequency.value=4000;const mid=ctx.createBiquadFilter();mid.type='peaking';mid.frequency.value=1100;mid.Q.value=0.8;const fxFilter=ctx.createBiquadFilter();fxFilter.type='lowpass';fxFilter.frequency.value=20000;fxFilter.Q.value=.6;const fxDelay=ctx.createDelay(.5),fxFeedback=ctx.createGain(),fxWet=ctx.createGain();fxDelay.delayTime.value=.24;fxFeedback.gain.value=.12;fxWet.gain.value=0;source.connect(bass);bass.connect(mid);mid.connect(treble);treble.connect(fxFilter);fxFilter.connect(gain);fxFilter.connect(fxDelay);fxDelay.connect(fxFeedback);fxFeedback.connect(fxDelay);fxDelay.connect(fxWet);fxWet.connect(gain);gain.connect(masterCompressor);return{source,bass,mid,treble,gain,fxFilter,fxDelay,fxFeedback,fxWet}});
+ nodes.forEach((n,i)=>n.gain.gain.value=i===activeDeck?(+$('volume').value/100)*djDeckGain(i):0);
+ updateEQ();setVolume();
+}
+function resetCreativeFX(){
+ if(!ctx||!nodes.length)return;
+ for(const n of nodes){if(!n.fxFilter)continue;n.fxFilter.frequency.setTargetAtTime(20000,ctx.currentTime,.025);n.fxWet.gain.setTargetAtTime(0,ctx.currentTime,.018);n.fxFeedback.gain.setTargetAtTime(0,ctx.currentTime,.018);}
+}
+function applyCreativeFX(outgoing,p,fadeSeconds){
+ if(!ctx||!nodes.length||!$('creativeFX')?.checked||fadeSeconds<2.8)return;
+ const n=nodes[outgoing];if(!n?.fxFilter)return;
+ const mode=$('creativeFXMode')?.value||'suave';
+ // Solo los últimos 35% del cruce, para no modificar la entrada ni la percusión dominante.
+ const t=Math.max(0,Math.min(1,(p-.65)/.35));
+ if(!t)return;
+ const cutoff=20000*Math.pow((mode==='suave'?2500:mode==='medio'?1500:1100)/20000,t);
+ n.fxFilter.frequency.setTargetAtTime(cutoff,ctx.currentTime,.05);
+ // Eco muy discreto; feedback desactivado al terminar. El volumen del deck saliente
+ // continúa bajando según el fundido original, limitando la cola del efecto.
+ const wet=mode==='suave'?0:mode==='medio'?.055:.085;
+ n.fxWet.gain.setTargetAtTime(wet*t,ctx.currentTime,.05);
+ n.fxFeedback.gain.setTargetAtTime(wet?0.10:0,ctx.currentTime,.05);
+}
+function djGainFactor(track){
+ const g=track?.gainFactor;
+ return Number.isFinite(g)?Math.min(1.18,Math.max(.78,g)):1;
+}
+function djDeckGain(deckIndex){
+ const active=deckIndex===activeDeck?tracks[current]:null;
+ const incoming=transition&&deckIndex===transition.incoming?tracks[transition.next]:null;
+ return djGainFactor(active||incoming);
+}
+function setVolume(){if(nodes.length)nodes.forEach((n,i)=>{if(!transition)n.gain.gain.value=i===activeDeck?(+$('volume').value/100)*djDeckGain(i):0})}
+function updateEQ(){if(!nodes.length)return;const now=ctx.currentTime;nodes.forEach(n=>{n.bass.gain.setTargetAtTime(+$('bass').value,now,.04);n.treble.gain.setTargetAtTime(+$('treble').value,now,.04)})}
+function adaptiveToneEQ(outgoing,incoming,p){
+ if(!ctx||!nodes.length||!$('autoEQ')?.checked)return;
+ const now=ctx.currentTime,b=+$('bass').value,h=+$('treble').value;
+ // Suave, conservador: -4 dB de graves y -2 dB de agudos al entrar;
+ // restaura progresivamente los ajustes manuales durante el fundido.
+ const inBass=b-4*(1-p),inHigh=h-2*(1-p);
+ const outBass=b-2*p,outHigh=h-1*p;
+ for(const [idx,low,high] of [[outgoing,outBass,outHigh],[incoming,inBass,inHigh]]){
+  nodes[idx].bass.gain.setTargetAtTime(low,now,.08);
+  nodes[idx].treble.gain.setTargetAtTime(high,now,.08);
+ }
+}
+function resetToneEQ(){updateEQ()}
+function cumbiaBassSwap(outgoing,incoming,p){
+ if(!ctx||!nodes.length)return;
+ const now=ctx.currentTime,base=+$('bass').value;
+ // Una sola base de graves dominante. Cambiar cerca del centro del fundido.
+ const outDb=base-15*Math.max(0,Math.min(1,(p-.28)/.26));
+ const inDb=base-15*(1-Math.max(0,Math.min(1,(p-.46)/.26)));
+ nodes[outgoing].bass.gain.setTargetAtTime(outDb,now,.035);
+ nodes[incoming].bass.gain.setTargetAtTime(inDb,now,.035);
+}
+
+
+function resetMixEQ(){
+ if(!ctx||!nodes.length)return;
+ const now=ctx.currentTime;
+ nodes.forEach(n=>{n.mid.gain.cancelScheduledValues(now);n.mid.gain.setTargetAtTime(0,now,0.035)});
+}
+function adaptiveMelodyEQ(outgoing,incoming,p){
+ if(!ctx||!nodes.length)return;
+ // Recorta suavemente la banda melódica del tema que sale y la restaura en el que entra.
+ // No identifica melodías individuales: es un ajuste tonal durante la transición.
+ const now=ctx.currentTime;
+ const outgoingCut=-Math.min(7,2+5*Math.sin(Math.PI*Math.min(1,p)));
+ const incomingCut=-Math.max(0,5*(1-p));
+ nodes[outgoing].mid.gain.setTargetAtTime(outgoingCut,now,0.07);
+ nodes[incoming].mid.gain.setTargetAtTime(incomingCut,now,0.07);
+}
+function yieldUI(){return new Promise(resolve=>setTimeout(resolve,0))}
+
+// Biblioteca persistente inspirada en AI DJ Studio — Auto.
+// Se guardan los archivos reales (Blob/File), no las URLs temporales.
+const DJ_LIBRARY_DB='djsuarez-v12-lab-biblioteca';
+const DJ_LIBRARY_STORE='tracks';
+let djStorageAvailable=null;
+const djLocalFile=/^(content:|file:)/i.test(location.protocol);
+function djStorageWarning(){return 'Los temas funcionan ahora, pero este archivo local de Android no permite guardarlos al cerrar. Para recordar la biblioteca hay que abrir el DJ desde una página HTTPS.';}
+
+function djOpenLibrary(){
+ return new Promise((resolve,reject)=>{
+  if(djLocalFile){djStorageAvailable=false;reject(new Error('Archivo local sin almacenamiento persistente'));return;}
+  if(!('indexedDB' in window)){djStorageAvailable=false;reject(new Error('IndexedDB no disponible'));return;}
+  let done=false;
+  const finish=(err,db)=>{if(done){if(db)db.close();return;}done=true;clearTimeout(timer);if(err){djStorageAvailable=false;reject(err)}else{djStorageAvailable=true;resolve(db)}};
+  const timer=setTimeout(()=>finish(new Error('Tiempo de espera agotado en IndexedDB')),4000);
+  try{
+   const req=indexedDB.open(DJ_LIBRARY_DB,1);
+   req.onupgradeneeded=()=>{const db=req.result;if(!db.objectStoreNames.contains(DJ_LIBRARY_STORE))db.createObjectStore(DJ_LIBRARY_STORE,{keyPath:'id'})};
+   req.onsuccess=()=>finish(null,req.result);
+   req.onerror=()=>finish(req.error||new Error('No se pudo abrir la biblioteca'));
+   req.onblocked=()=>finish(new Error('Base de datos bloqueada'));
+  }catch(e){finish(e)}
+ });
+}
+async function djSaveLibrary(items){
+  if(!items.length)return;
+  const db=await djOpenLibrary();
+  try{
+    // Lotes cortos: no bloquear la interfaz ni una transacción durante un await.
+    for(let i=0;i<items.length;i+=5){
+      await new Promise((resolve,reject)=>{
+        const tx=db.transaction(DJ_LIBRARY_STORE,'readwrite');
+        const store=tx.objectStore(DJ_LIBRARY_STORE);
+        for(const item of items.slice(i,i+5))store.put(item);
+        tx.oncomplete=resolve;
+        tx.onerror=()=>reject(tx.error || new Error('Error al guardar'));
+        tx.onabort=()=>reject(tx.error || new Error('Guardado cancelado'));
+      });
+      await yieldUI();
+    }
+  }finally{db.close()}
+}
+async function djRestoreLibrary(){
+  let db;
+  try{
+    db=await djOpenLibrary();
+    const saved=await new Promise((resolve,reject)=>{
+      const req=db.transaction(DJ_LIBRARY_STORE,'readonly')
+        .objectStore(DJ_LIBRARY_STORE).getAll();
+      req.onsuccess=()=>resolve(req.result||[]);
+      req.onerror=()=>reject(req.error);
+    });
+    if(!saved.length)return;
+    const seen=new Set(tracks.map(t=>t.folderId+'|'+t.name.toLowerCase()+'|'+t.size));
+    $('libraryInfo').textContent='Restaurando '+saved.length+' canciones guardadas…';
+    for(let i=0;i<saved.length;i+=25){
+      for(const item of saved.slice(i,i+25)){
+        const f=item.file;
+        if(!(f instanceof Blob))continue;
+        const folderId=item.folderId||'folder-mimusica';
+        const name=item.name||'Sin nombre';
+        const size=item.size||f.size;
+        const key=folderId+'|'+name.toLowerCase()+'|'+size;
+        if(seen.has(key))continue;
+        seen.add(key);
+        tracks.push({
+          folderId,folderName:item.folderName||'Mi música',
+          name,file:f,size,url:URL.createObjectURL(f),
+          duration:0,bpm:null,analysis:'Pendiente',
+          genre:item.genre||'otros',energy:null
+        });
+        const n=/^folder-(\d+)$/.exec(folderId);
+        if(n)folderSerial=Math.max(folderSerial,Number(n[1]));
+      }
+      await yieldUI();
+    }
+    tracks.sort((a,b)=>a.name.localeCompare(b.name,'es',{numeric:true,sensitivity:'base'}));
+    refreshFolderScope();
+    renderTracks();
+    $('libraryInfo').textContent=tracks.length+' canciones recuperadas de la biblioteca.';
+    status('BIBLIOTECA LISTA');
+  }catch(err){
+    $('libraryInfo').textContent=djStorageWarning();
+  }finally{if(db)db.close()}
+}
+async function djAskPersistentStorage(){
+  try{
+    if(navigator.storage?.persist)await navigator.storage.persist();
+  }catch(e){}
+}
+
+async function addFiles(fileList,fromFolder=false){
+ if(loadingLibrary)return;
+ loadingLibrary=true;const files=fileList;let added=0,checked=0;
+  // V11.3: los archivos individuales siempre pertenecen a una carpeta real.
+  // Si se muestra «Toda la biblioteca», usar la carpeta del tema actual,
+  // o la primera carpeta cargada. Nunca crear la carpeta ficticia «loose».
+  const namedFolder=!fromFolder?$('folderNameInput').value.trim():'';
+  let targetScope=!fromFolder?$('folderScope').value:null;
+  if(namedFolder){const existing=tracks.find(t=>t.folderName.toLocaleLowerCase('es')===namedFolder.toLocaleLowerCase('es'));targetScope=existing?.folderId||('named-'+Array.from(new TextEncoder().encode(namedFolder.toLocaleLowerCase('es'))).map(x=>x.toString(16).padStart(2,'0')).join(''));}
+  if(!fromFolder&&!namedFolder&&(targetScope==='all'||!tracks.some(t=>t.folderId===targetScope))){
+    targetScope=tracks[current]?.folderId||tracks[0]?.folderId||null;
+  }
+  // Si aún no hay carpeta, crear una biblioteca normal para permitir canciones sueltas.
+  // Si ya existe una carpeta, las canciones se incorporan a ella.
+  const batchFolder=fromFolder?'folder-'+(++folderSerial):(targetScope||'folder-mimusica');
+ const seen=new Set(tracks.map(t=>`${t.folderId}|${t.name.toLowerCase()}|${t.size}`));
+ const activeTrack=tracks[current]||null;
+ const toRemember=[];
+ $('chooseFolder').disabled=true;$('chooseFiles').disabled=true;status('CARGANDO');
+ $('libraryInfo').textContent=`Preparando ${files.length} archivos…`;
+ try{
+  // Procesa lotes pequeños para que Android pueda seguir pintando la pantalla.
+  for(let start=0;start<files.length;start+=25){
+   const end=Math.min(start+25,files.length);
+   for(let i=start;i<end;i++){
+    const f=files[i];checked++;
+    if(!(f.type.startsWith('audio/')||supported.test(f.name)))continue;
+    const key=`${batchFolder}|${f.name.toLowerCase()}|${f.size}`;if(seen.has(key))continue;seen.add(key);
+    tracks.push({folderId:batchFolder,folderName:fromFolder?(f.webkitRelativePath?f.webkitRelativePath.split('/')[0]:`Carpeta ${folderSerial}`):(namedFolder||tracks.find(t=>t.folderId===batchFolder)?.folderName||'Mi música'),name:f.name,file:f,size:f.size,url:URL.createObjectURL(f),duration:0,bpm:null,analysis:'Pendiente',genre:detectGenre((f.webkitRelativePath||'')+' '+f.name)!=='otros'?detectGenre((f.webkitRelativePath||'')+' '+f.name):(!fromFolder?(tracks.find(t=>t.folderId===batchFolder&&t.genre!=='otros')?.genre||detectGenre(tracks.find(t=>t.folderId===batchFolder)?.folderName||'')):'otros'),energy:null});
+    const addedTrack=tracks[tracks.length-1];
+    toRemember.push({id:key,folderId:addedTrack.folderId,folderName:addedTrack.folderName,name:f.name,size:f.size,genre:addedTrack.genre,file:f});
+    added++;
+   }
+   $('libraryInfo').textContent=`Leyendo archivos: ${checked}/${files.length} · ${tracks.length} temas de audio`;
+   await yieldUI();
+  }
+  let saveWarning='';
+  if(toRemember.length){
+    if(djLocalFile||djStorageAvailable===false){saveWarning=' · '+djStorageWarning()}
+    else {try{await djSaveLibrary(toRemember);djAskPersistentStorage()}
+    catch(err){saveWarning=' · '+djStorageWarning()}}
+  }
+  tracks.sort((a,b)=>a.name.localeCompare(b.name,'es',{numeric:true,sensitivity:'base'}));
+  if(activeTrack)current=tracks.indexOf(activeTrack);
+  preparedTrack=-1;
+  refreshFolderScope(batchFolder);
+  if(namedFolder)$('folderNameInput').value='';
+  renderTracks();
+  if(autoDJ)prepareNextAnalysis();
+  $('libraryInfo').textContent=`${tracks.length} temas cargados · ${added} nuevos · Ordenados por nombre`+saveWarning;
+  status(tracks.length?'BIBLIOTECA LISTA':'SIN TEMAS');
+ }catch(err){$('libraryInfo').textContent=`Carga parcial: ${tracks.length} temas agregados. Probá agregar la carpeta en grupos más pequeños.`;status('CARGA PARCIAL');}
+ finally{loadingLibrary=false;$('chooseFolder').disabled=false;$('chooseFiles').disabled=false;}
+}
+function scopedIndices(){
+ const scope=$('folderScope').value;
+ return tracks.map((t,i)=>({t,i})).filter(x=>scope==='all'||x.t.folderId===scope);
+}
+function refreshFolderScope(prefer){
+ const sel=$('folderScope'), previous=prefer||sel.value;
+ const folders=new Map();tracks.forEach(t=>{if(!folders.has(t.folderId))folders.set(t.folderId,{name:t.folderName,count:0});folders.get(t.folderId).count++});
+ sel.replaceChildren(new Option('Toda la biblioteca','all'));
+ for(const [id,info] of folders)sel.add(new Option(`${info.name} (${info.count})`,id));
+ sel.value=folders.has(previous)?previous:'all';
+ const suggestions=$('folderNameSuggestions');if(suggestions){suggestions.replaceChildren();for(const info of folders.values()){const o=document.createElement('option');o.value=info.name;suggestions.append(o)}}
+ $('scopeCount').textContent=`${scopedIndices().length} temas`;
+}
+async function djDeleteSong(track){
+ if(!track)return;
+ if(!confirm('¿Borrar «'+track.name+'» de la biblioteca del DJ? El archivo original del celular no se borra.'))return;
+ const index=tracks.indexOf(track);if(index<0)return;
+ // Borrar la copia guardada antes de quitar la canción visible.
+ if(!djLocalFile){
+  let db;
+  try{
+   db=await djOpenLibrary();
+   await new Promise((resolve,reject)=>{
+    const tx=db.transaction(DJ_LIBRARY_STORE,'readwrite');
+    tx.objectStore(DJ_LIBRARY_STORE).delete(track.folderId+'|'+track.name.toLowerCase()+'|'+track.size);
+    tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);
+   });
+  }catch(err){
+   alert('No se pudo borrar del almacenamiento permanente. Revisá Chrome e intentá nuevamente.');
+   return;
+  }finally{if(db)db.close()}
+ }
+ const wasPlaying=index===current;
+ clearTransition();
+ if(wasPlaying){decks.forEach(el=>{el.pause();el.removeAttribute('src');el.load()});current=-1;autoDJ=false;$('autoBtn').textContent='▶ Auto DJ';$('playBtn').textContent='▶ Play';status('LISTO');$('currentTitle').textContent='Cargá tu música';$('currentMeta').textContent='Esperando el primer tema';$('elapsed').textContent='00:00';$('duration').textContent='00:00';$('progress').style.width='0%';$('bpmVal').textContent='—';$('keyVal').textContent='—';}
+ else if(current>index)current--;
+ if(requestedNextTrack===track)requestedNextTrack=null;
+ sessionPlayed=sessionPlayed.filter(t=>t!==track);
+ if(preparedTrack>=0)preparedTrack=-1;
+ tracks.splice(index,1);
+ URL.revokeObjectURL(track.url);
+ refreshFolderScope();renderTracks();renderUpcoming();renderDecision();
+ $('libraryInfo').textContent=tracks.length+' canciones en la biblioteca · tema borrado';
+ if(current>=0)setCurrentUI(current);
+}
+function djSeekSeconds(seconds){
+ if(current<0)return;
+ const el=decks[activeDeck];
+ if(!Number.isFinite(el.duration)||el.duration<=0)return;
+ // Evitar cambiar de posición durante un fundido entre decks.
+ if(transition)clearTransition();
+ const max=Math.max(0,el.duration-.2);
+ el.currentTime=Math.max(0,Math.min(max,el.currentTime+seconds));
+ $('elapsed').textContent=fmt(el.currentTime);
+ $('progress').style.width=(el.currentTime/el.duration*100)+'%';
+}
+function renderTracks(){
+ $('count').textContent=`(${tracks.length})`;if($('scopeCount'))$('scopeCount').textContent=`${scopedIndices().length} temas`;const box=$('playlist');
+ if(!tracks.length){box.innerHTML='<div class="empty">Elegí una carpeta de música para empezar.</div>';return}
+ const fragment=document.createDocumentFragment();
+ tracks.forEach((t,i)=>{if($('folderScope').value!=='all'&&t.folderId!==$('folderScope').value)return;if($('genreFilter').value!=='todos'&&t.genre!==$('genreFilter').value)return;const d=document.createElement('div');d.className='trackrow'+(i===current?' active':'');const no=document.createElement('div');no.className='trackno';no.textContent=String(i+1).padStart(2,'0');const mid=document.createElement('div');mid.style.minWidth='0';const name=document.createElement('div');name.className='trackname';name.textContent=t.name;const meta=document.createElement('div');meta.className='trackmeta';meta.textContent=`${t.duration?fmt(t.duration):'Duración pendiente'} · ${t.bpm?t.bpm+' BPM':t.analysis} · ${genreNames[t.genre]}${t.energy!=null?' · Energía '+Math.round(t.energy*100)+'%':''}`;mid.append(name,meta);const b=document.createElement('button');b.className='btn tinybtn';b.textContent='▶';b.onclick=()=>playTrack(i);const q=document.createElement('button');q.className='btn tinybtn';q.textContent=requestedNextTrack===t?'✓ Próximo':'⏭ Próximo';q.title='Elegir como próxima canción';q.onclick=e=>{e.stopPropagation();requestedNextTrack=requestedNextTrack===t?null:t;renderTracks();renderUpcoming();renderDecision();prepareIncomingDeck();$('mixMessage').textContent=requestedNextTrack?'Próximo tema elegido: '+requestedNextTrack.name:'Próximo tema automático restaurado.'};const buttons=document.createElement('div');buttons.style.display='flex';buttons.style.gap='4px';const del=document.createElement('button');del.className='btn tinybtn';del.textContent='🗑 Borrar';del.title='Quitar de la biblioteca';del.onclick=e=>{e.stopPropagation();djDeleteSong(t)};buttons.append(b,q,del);d.append(no,mid,buttons);d.onclick=e=>{if(!buttons.contains(e.target))playTrack(i)};fragment.append(d)});
+ box.replaceChildren(fragment);$('genreCount').textContent=$('genreFilter').value==='todos'?'Todos':genreNames[$('genreFilter').value];
+}
+function renderHistory(){const box=$('history');if(!historyList.length){box.innerHTML='<div class="empty">Los temas reproducidos aparecerán aquí.</div>';return}box.innerHTML='';historyList.slice().reverse().forEach(h=>{const d=document.createElement('div');d.className='historyitem';const strong=document.createElement('strong');strong.textContent=h.name;const s=document.createElement('span');s.textContent=h.when;d.append(strong,s);box.append(d)})}
+function logTrack(t){if(!t)return;sessionPlayed.push(t);sessionPlayed=sessionPlayed.slice(-Math.max(30,tracks.length*2));historyList.push({name:t.name,when:new Date().toLocaleString('es-AR')});historyList=historyList.slice(-100);try{localStorage.setItem('autodj-history',JSON.stringify(historyList))}catch(e){}renderHistory();renderUpcoming()}
+function setCurrentUI(i){const t=tracks[i];if(!t)return;$('currentTitle').textContent=t.name;$('currentMeta').textContent=`Tema ${i+1} de ${tracks.length}`;$('analysisLabel').textContent=t.bpm?`Análisis: ${t.analysis}`:'Análisis: calculando BPM…';$('bpmVal').textContent=t.bpm||'…';$('keyVal').textContent=t.bpm?(t.beatConfidence!=null?'Pulso '+Math.round(t.beatConfidence*100)+'%':'4/4 estimado'):'…';$('loopStart').max=Math.max(0,t.duration||60);$('loopEnd').max=Math.max(1,t.duration||90);renderTracks();renderUpcoming()}
+async function playTrack(i){
+ if(!tracks.length)return;
+ clearTransition();current=(i+tracks.length)%tracks.length;const t=tracks[current];audioGraph();if(ctx&&ctx.state==='suspended')await ctx.resume();
+ const el=decks[activeDeck];el.pause();el.src=t.url;el.loop=$('repeat').checked;loopOn=false;$('loopBtn').textContent='⟲ Activar loop';
+ if(nodes.length){nodes.forEach((n,j)=>n.gain.gain.value=j===activeDeck?(+$('volume').value/100)*djDeckGain(j):0)}
+ try{await el.play();status(autoDJ?'AUTO DJ ACTIVO':'REPRODUCIENDO');$('playBtn').textContent='⏸ Pausa';setCurrentUI(current);loadCutForCurrent();logTrack(t);$('mixMessage').textContent='Reproducción normal. Auto DJ activa el fundido solapado entre dos reproductores.';if(!t.bpm&&!String(t.analysis).startsWith('Error de análisis'))analyzeTrack(t).then(()=>setTimeout(prepareNextAnalysis,250));else setTimeout(prepareNextAnalysis,250)}catch(e){status('ERROR DE AUDIO');$('mixMessage').textContent='No se pudo reproducir este archivo. Probá MP3 o WAV.'}
+}
+function artistName(track){
+ const name=(track?.name||'').replace(/\.[^.]+$/,'');
+ const split=name.split(/\s[-–—]\s/);
+ // Si el archivo no trae «Artista - Tema», no inventar que todo el título es un artista.
+ if(split.length<2)return '';
+ return split[0].trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ');
+}
+function bpmDistance(a,b){
+ if(!(a>0&&b>0))return null;
+ return Math.abs(Math.log2(a/b));
+}
+function rankNextIndex(fromIndex=current, played=sessionPlayed, excluded=new Set()){
+ if(!tracks.length)return -1;
+ const pool=scopedIndices();
+ if(pool.length<2)return -1;
+ const available=pool.filter(x=>x.i!==fromIndex&&!excluded.has(x.i));
+ const cooldown=Math.min(Math.max(0,+$('noRepeat')?.value||10),available.length);
+ const recently=played.slice(-cooldown);
+ let eligible=available.filter(x=>!played.includes(x.t));
+ if(!eligible.length)eligible=available.filter(x=>!recently.includes(x.t));
+ // Si se agotaron los temas no repetidos, recuperar el menos reciente.
+ if(!eligible.length){
+   const lastPlayed=t=>played.lastIndexOf(t);
+   const oldest=Math.min(...available.map(x=>lastPlayed(x.t)));
+   eligible=available.filter(x=>lastPlayed(x.t)===oldest);
+ }
+ if($('shuffle').checked)return eligible[Math.floor(Math.random()*eligible.length)].i;
+ const mode=$('djSelectionMode')?.value||'fiesta';
+ const active=tracks[fromIndex];
+ const artists=played.slice(-4).map(artistName).filter(Boolean);
+ const lastArtist=artistName(active);
+ const count=played.length;
+ const ranked=eligible.map(x=>{
+   const t=x.t;
+   let score=0;
+   const bpmDiff=bpmDistance(active?.bpm,t.bpm);
+   // Si el pulso estimado es débil, no confiar demasiado en ese BPM.
+   const rhythmTrust=Math.min(active?.beatConfidence??.5,t.beatConfidence??.5);
+   if(bpmDiff!=null&&rhythmTrust<.12)score-=8;
+   if($('bpmMatch').checked){
+     if(bpmDiff!=null){
+       score+=Math.max(-38,38-220*bpmDiff);
+       if(bpmDiff>.17)score-=24;
+       if(bpmDiff<.09&&rhythmTrust>.3)score+=10;
+     }else score-=4;
+   }
+   if(t.genre!=='otros'&&active?.genre===t.genre)score+=mode==='equilibrado'?12:22;
+   else if(t.genre!=='otros'&&active?.genre!=='otros'&&mode==='fiesta')score-=8;
+   const artist=artistName(t);
+   if(artist&&artist===lastArtist)score-=42;
+   else if(artist&&artists.includes(artist))score-=20;
+   if(t.energy!=null){
+     if(mode==='fiesta'){
+       // Fiesta busca energía alta, pero evita cambios bruscos entre temas consecutivos.
+       score+=Math.min(18,t.energy*24);
+       if(active?.energy!=null)score+=Math.max(-24,26-95*Math.abs(t.energy-active.energy));
+       if(t.energy<.25)score-=12;
+     }else if(mode==='progresivo'){
+       const target=Math.min(.85,.4+Math.floor(count/4)*.06);
+       score+=Math.max(-20,25-80*Math.abs(t.energy-target));
+     }else if(active?.energy!=null){
+       score+=Math.max(-20,23-70*Math.abs(t.energy-active.energy));
+     }
+   }
+   // Pequeña preferencia por canciones aún no escuchadas en esta sesión.
+   if(!played.includes(t))score+=9;
+   // Desempate estable para que la preselección no salte entre llamadas.
+   score-=x.i*.00001;
+   return {i:x.i,score};
+ }).sort((a,b)=>b.score-a.score);
+ return ranked[0]?.i??-1;
+}
+
+
+function planUpcoming(limit=5){
+ if(current<0||!tracks[current])return [];
+ const result=[], played=sessionPlayed.slice(), used=new Set();
+ let from=current;
+ if(requestedNextTrack){const forced=tracks.indexOf(requestedNextTrack);if(forced>=0&&forced!==current&&scopedIndices().some(x=>x.i===forced)){result.push(forced);used.add(forced);played.push(tracks[forced]);from=forced;}else requestedNextTrack=null;}
+ for(let n=result.length;n<Math.min(limit,scopedIndices().length-1);n++){
+   const i=rankNextIndex(from,played,used);
+   if(i<0||used.has(i)||i===from)break;
+   result.push(i);used.add(i);played.push(tracks[i]);from=i;
+ }
+ return result;
+}
+function djAutoEligible(){
+ const pool=scopedIndices().map(x=>x.i).filter(i=>i!==current);
+ if(!pool.length)return [];
+ const heard=new Set(sessionPlayed);
+ const fresh=pool.filter(i=>!heard.has(tracks[i]));
+ // Si ya se escucharon todos, iniciar una nueva vuelta sin repetir el actual.
+ if(!fresh.length){
+   // Se terminó la vuelta: permitir todos salvo el tema actual.
+   return pool;
+ }
+ return fresh;
+}
+function proSimilarNext(){
+ const a=tracks[current];if(!a)return -1;
+ if(requestedNextTrack){const forced=tracks.indexOf(requestedNextTrack);if(forced>=0&&forced!==current)return forced;}
+ const recent=new Set(sessionPlayed.slice(-Math.min(8,Math.max(1,tracks.length-2))));
+ const candidates=djAutoEligible().map(i=>{
+   const b=tracks[i];let score=0;
+   if(a.bpm&&b.bpm){const ratio=Math.abs(Math.log2(a.bpm/b.bpm));const harmonic=Math.min(ratio,Math.abs(ratio-1),Math.abs(ratio+1));score+=Math.max(0,65-300*harmonic)}
+   if(a.genre&&a.genre!=='otros'&&a.genre===b.genre)score+=30;
+   if(Number.isFinite(a.energy)&&Number.isFinite(b.energy))score+=Math.max(0,22-55*Math.abs(a.energy-b.energy));
+   if(recent.has(b))score-=85;
+   if(b===tracks[current])score-=1000;
+   return {i,score};
+ });
+ candidates.sort((x,y)=>y.score-x.score);
+ return candidates[0]?.i??-1;
+}
+function nextIndex(){return $('hardCutMode')?.checked?proSimilarNext():(planUpcoming(1)[0]??-1)}
+
+let proLastCut=0,proCutInProgress=false,proPhraseState=null;
+function proBars(){return Math.max(4,Math.min(16,Number($('proPhraseBars')?.value)||8))}
+function proBeat(t){return t?.bpm>=60&&t.bpm<=200?60/t.bpm:null}
+function proBarDuration(t){const b=proBeat(t);return b?b*4:null}
+function proGrid(t,at,mode='nearest',bars=1){
+ const bar=proBarDuration(t);if(!bar)return at;
+ const origin=Number.isFinite(t.beatOffset)?t.beatOffset:0;
+ const step=bar*bars;
+ const v=(at-origin)/step;
+ return Math.max(0,origin+(mode==='ceil'?Math.ceil(v):mode==='floor'?Math.floor(v):Math.round(v))*step);
+}
+// Índice de frases: guarda MARCAS DE TIEMPO, no copias de audio.
+const proPhraseMemory=new Map();
+function proMemoryKey(t){return 'dj-v13-phrases:'+String(t.name||'')+':'+String(t.size||0)+':'+proBars()}
+function proSectionAt(t,sec){return (t.sections||[]).find(z=>sec>=z.start&&sec<z.end)||null}
+function proPhraseCandidates(t,duration,kind){
+ const bar=proBarDuration(t),bars=proBars();
+ if(!bar||!Number.isFinite(duration)||duration<25)return [];
+ const phrase=bar*bars,first=kind==='out'?Math.max(15,phrase):0;
+ const last=kind==='out'?Math.min(duration-8,duration*.76):Math.min(duration-phrase-2,duration*.65,110);
+ const result=[];
+ for(let n=0;n<160;n++){
+  const time=proGrid(t,first,'ceil',bars)+n*phrase;
+  if(time>last)break;
+  const z=proSectionAt(t,time),prev=proSectionAt(t,Math.max(0,time-phrase));
+  const level=z?.level||'media',prevLevel=prev?.level||'media';
+  const energy=level==='intensa'?3:level==='media'?2:1;
+  const contrast=prevLevel!==level?0.35:0;
+  // Los cambios de sección suelen coincidir con fronteras de frases, pero no siempre.
+  const boundary=(t.sections||[]).some(q=>Math.abs(q.start-time)<bar*.6)?1.1:0;
+  const confidence=Number.isFinite(t.beatConfidence)?t.beatConfidence:0;
+  const score=kind==='out'?(2.6+contrast+boundary+confidence*.8-Math.abs(time-duration*.43)/duration):
+   (energy+boundary+confidence*.8-time*.004);
+  result.push({time:Math.round(time*100)/100,score,level,bars});
+ }
+ return result.sort((x,y)=>y.score-x.score).slice(0,14);
+}
+function proRemember(t,duration){
+ const key=proMemoryKey(t),cached=proPhraseMemory.get(key);
+ if(cached&&cached.duration===duration)return cached;
+ let data;
+ try{const raw=localStorage.getItem(key);data=raw?JSON.parse(raw):null}catch(e){}
+ if(!data||data.duration!==duration){
+  data={duration,out:proPhraseCandidates(t,duration,'out'),in:proPhraseCandidates(t,duration,'in')};
+  try{localStorage.setItem(key,JSON.stringify(data))}catch(e){}
+ }
+ proPhraseMemory.set(key,data);return data;
+}
+function proFindPair(el){
+ const t=tracks[current],duration=el.duration;
+ if(!t||!proBarDuration(t)||!Number.isFinite(duration))return null;
+ const outs=proRemember(t,duration).out;
+ if(!outs.length)return null;
+ const ni=proSimilarNext(),next=tracks[ni];
+ if(!next)return null;
+ const nextDuration=next.duration||180;
+ const ins=proRemember(next,nextDuration).in;
+ if(!ins.length)return null;
+ let best=null;
+ for(const o of outs)for(const i of ins){
+  const energyMatch=o.level===i.level?1.2:0;
+  const tempoMatch=proBeat(t)&&proBeat(next)?Math.max(-4,2-18*Math.abs(Math.log2(t.bpm/next.bpm))):0;
+  const score=o.score+i.score+energyMatch+tempoMatch;
+  if(!best||score>best.score)best={score,out:o.time,in:i.time,nextIndex:ni};
+ }
+ return best;
+}
+function proTargetTime(t,duration){
+ return proRemember(t,duration).in[0]?.time??0;
+}
+
+// V14.5 ORGANIC MIX PRO: nunca repite una estrofa ni salta a un tiempo arbitrario.
+// Una transición temprana requiere BPM de ambos temas, pulso fiable,
+// compatibilidad rítmica y una frontera musical futura.
+function proOrganicPair(el){
+ const a=tracks[current],duration=el.duration;
+ if(!a||!Number.isFinite(duration)||duration<45||duration-el.currentTime<22)return null;
+ if(!(a.bpm>=65&&a.bpm<=180)||(a.beatConfidence??0)<.25)return null;
+ const indices=djAutoEligible();
+ if(requestedNextTrack){const chosen=tracks.indexOf(requestedNextTrack);if(indices.includes(chosen)){indices.splice(indices.indexOf(chosen),1);indices.unshift(chosen)}}
+ let best=null;
+ for(const ni of indices){
+   const b=tracks[ni];
+   if(!b||!(b.bpm>=65&&b.bpm<=180)||(b.beatConfidence??0)<.25)continue;
+   const diff=Math.abs(Math.log2(a.bpm/b.bpm));
+   if(diff>.065)continue;
+   const bdur=b.duration||180;
+   const ins=proPhraseCandidates(b,bdur,'in').filter(c=>c.time>=0&&c.time<bdur-12);
+   const outs=proPhraseCandidates(a,duration,'out').filter(c=>
+      c.time>=Math.max(28,el.currentTime+15)&&c.time<duration-12);
+   for(const o of outs)for(const i of ins){
+     const levelMatch=o.level===i.level?1:0;
+     const strength=Math.min(a.beatConfidence,b.beatConfidence);
+     const score=levelMatch*1.1+strength*2-diff*20+(requestedNextTrack===b?0.7:0)+
+       Math.min(1,o.score/5)+Math.min(1,i.score/5)-
+       Math.abs(o.time-duration*.63)/duration*.4;
+     if(!best||score>best.score)
+       best={score,out:o.time,in:i.time,nextIndex:ni,track:a,deck:activeDeck};
+   }
+ }
+ return best&&best.score>=2.65?best:null;
+}
+async function proPrepareOrganic(plan){
+ const incoming=1-plan.deck,inc=decks[incoming],next=tracks[plan.nextIndex];
+ if(!next||plan.track!==tracks[current]||plan.deck!==activeDeck)return false;
+ // Nunca interferir con una mezcla clásica en curso.
+ if(transition||preparingMix)return false;
+ try{
+   inc.pause();
+   if(inc.src!==next.url){inc.src=next.url;inc.load()}
+   if(!await waitForDeckReady(inc,3500))return false;
+   inc.playbackRate=1;
+   inc.currentTime=Math.min(Math.max(0,plan.in),Math.max(0,inc.duration-2));
+   await waitForSeek(inc,500);
+   if(nodes.length)nodes[incoming].gain.gain.value=0;
+   plan.ready=true;
+   return true;
+ }catch(e){return false}
+}
+async function proHardCut(planned=null){
+ const p=planned||proPhraseState;
+ if(!p||!p.ready||proCutInProgress||transition||preparingMix||current<0)return;
+ if(p.track!==tracks[current]||p.deck!==activeDeck)return;
+ const outgoing=activeDeck,incoming=1-outgoing,inc=decks[incoming],next=tracks[p.nextIndex];
+ if(!next||inc.readyState<2)return;
+ proCutInProgress=true;
+ try{
+   audioGraph();if(ctx?.state==='suspended')await ctx.resume();
+   // Mantener ambos decks sonando durante un fundido de potencia constante.
+   // Evita el salto audible de la V14.5 (que pausaba el tema saliente en 110 ms).
+   const volume=+$('volume').value/100;
+   const old=tracks[current];
+   const oldGain=djGainFactor(old),newGain=djGainFactor(next);
+   if(nodes.length){
+     nodes[outgoing].gain.gain.value=volume*oldGain;
+     nodes[incoming].gain.gain.value=0;
+   }
+   await inc.play();
+   if(activeDeck!==outgoing||current<0||transition)throw Error('La reproducción cambió durante la preparación');
+   // Duración musical mínima para evitar una entrada cortada en seco.
+   const bar=proBarDuration(old)||2.3;
+   const fadeSeconds=Math.max(2.8,Math.min(5.5,bar*1.5));
+   const start=performance.now();
+   transition={outgoing,incoming,next:p.nextIndex,start,duration:fadeSeconds*1000,organic:true};
+   proPhraseState=null;
+   proLastCut=performance.now();
+   $('hardCutInfo').textContent='🎧 Organic Mix suave: '+old.name+' → '+next.name+' · fundido '+fadeSeconds.toFixed(1)+' s · inicio estimado '+fmt(p.in);
+   $('mixMessage').textContent='Organic Mix: entrada anticipada con fundido progresivo; sin corte seco.';
+   transitionTimer=setInterval(()=>{
+     if(!transition||!transition.organic){clearInterval(transitionTimer);transitionTimer=null;return}
+     const q=Math.min(1,(performance.now()-start)/(fadeSeconds*1000));
+     if(nodes.length){
+       nodes[outgoing].gain.gain.value=volume*oldGain*Math.cos(q*Math.PI/2);
+       nodes[incoming].gain.gain.value=volume*newGain*Math.sin(q*Math.PI/2);
+       adaptiveMelodyEQ(outgoing,incoming,q);
+       adaptiveToneEQ(outgoing,incoming,q);
+     }
+     if(q>=1){
+       clearInterval(transitionTimer);transitionTimer=null;
+       decks[outgoing].pause();decks[outgoing].currentTime=0;decks[outgoing].playbackRate=1;
+       activeDeck=incoming;current=p.nextIndex;preparedTrack=-1;transition=null;
+       resetCreativeFX();resetMixEQ();resetToneEQ();
+       if(requestedNextTrack===next)requestedNextTrack=null;
+       setCurrentUI(current);loadCutForCurrent();logTrack(next);renderUpcoming();
+       $('playBtn').textContent='⏸ Pausa';status('AUTO DJ ACTIVO');
+       if(!next.bpm)analyzeTrack(next);else prepareNextAnalysis();
+       setTimeout(prepareIncomingDeck,300);
+     }
+   },35);
+ }catch(e){
+   if(nodes.length){nodes[outgoing].gain.gain.value=(+$('volume').value/100)*djGainFactor(tracks[current]);nodes[incoming].gain.gain.value=0}
+   $('hardCutInfo').textContent='Se mantiene el tema: '+(e?.message||e);
+ }finally{proCutInProgress=false}
+}
+
+let proLastDiagnostics=0,proLastAnalysisKick=0;
+function proDiagnostics(message){
+ if(performance.now()-proLastDiagnostics<3500)return;
+ proLastDiagnostics=performance.now();
+ const target=$('hardCutInfo');
+ if(target)target.textContent='🎧 V14.5 · '+message;
+}
+function proAnalyzeCandidates(){
+ if(!autoDJ||!$('hardCutMode')?.checked||analysisBusy||current<0)return;
+ if(performance.now()-proLastAnalysisKick<6500)return;
+ proLastAnalysisKick=performance.now();
+ const list=scopedIndices().map(x=>tracks[x.i]).filter(t=>t&&t!==tracks[current]);
+ const missing=list.find(t=>!t.sections?.length&&t.analysis!=='Analizando'&&t.analysis!=='Error de análisis');
+ if(missing)analyzeTrack(missing);
+}
+function proMaybeCut(el){
+ if(!$('hardCutMode')?.checked||!autoDJ||loopOn||transition||proCutInProgress||preparingMix||current<0){
+   proPhraseState=null;return;
+ }
+ if(performance.now()-proLastCut<10000)return;
+ const t=tracks[current];
+ if(proPhraseState&&(proPhraseState.track!==t||proPhraseState.deck!==activeDeck))proPhraseState=null;
+ if(!proPhraseState){
+   const plan=proOrganicPair(el);
+   if(!plan){
+     const pool=scopedIndices().map(x=>tracks[x.i]).filter(t=>t!==tracks[current]);
+     const ready=pool.filter(t=>t?.sections?.length&&t.bpm).length;
+     proDiagnostics('Buscando un enganche compatible ('+ready+'/'+pool.length+' temas analizados). Si no aparece, continúa la mezcla normal.');
+     if(ready<pool.length)proAnalyzeCandidates();
+     return;
+   } // Si no hay enganche, no se fuerza.
+   plan.ready=false;plan.loading=true;
+   proPhraseState=plan;
+   proPrepareOrganic(plan).then(ok=>{
+     if(proPhraseState!==plan)return;
+     plan.loading=false;
+     if(!ok){proPhraseState=null;proDiagnostics('No se pudo preparar la entrada. Se conserva la transición normal.');return}
+     $('hardCutInfo').textContent='🎧 Enganche suave preparado: '+fmt(plan.out)+
+       ' → '+fmt(plan.in)+' · esperando el punto calculado (pulso estimado).';
+   });
+   return;
+ }
+ const p=proPhraseState;
+ // Si preparar el segundo deck llevó demasiado, NO cortar tarde.
+ if(el.currentTime>p.out+.35){proPhraseState=null;proDiagnostics('El punto pasó antes de preparar el segundo deck. Sigue la mezcla normal.');return}
+ if(p.ready&&el.currentTime>=p.out-.12)proHardCut(p);
+}
+
+function renderDecision(){
+ const box=$('decisionPanel');if(!box)return;
+ box.replaceChildren();
+ const a=tracks[current],ni=current>=0?nextIndex():-1,b=tracks[ni];
+ if(!a||!b){const e=document.createElement('div');e.className='empty';e.textContent='Cargá al menos dos canciones y seleccioná una para ver el análisis.';box.append(e);return;}
+ const cfg=adaptiveMixSettings(a,b);
+ const pair=mixGenre(a,b);
+ const manualEarly=Number($('earlyMix').value);
+ const early=cfg.early??manualEarly;
+ const bpmDiff=bpmDistance(a.bpm,b.bpm);
+ const confidence=Math.min(a.beatConfidence??0,b.beatConfidence??0);
+ const genre=pair?(genreNames[pair]||pair):'Mixto / sin confirmar';
+ const lines=[
+  ['Siguiente canción',b.name],
+  ['Género de la pareja',genre],
+  ['Preparación',cfg.early!=null?`${early} s antes del final (ajuste automático o guardado)`:`Variable · referencia ${early} s; puede variar por frases musicales`],
+  ['Fundido estimado',cfg.fade.toFixed(1)+' s'],
+  ['BPM',`${a.bpm||'sin analizar'} → ${b.bpm||'sin analizar'}`],
+  ['Compatibilidad rítmica',bpmDiff==null?'Sin datos suficientes':bpmDiff<.08?'Alta (estimada)':bpmDiff<.17?'Media (estimada)':'Baja (estimada)'],
+  ['Confianza en pulsos',confidence?Math.round(confidence*100)+'% (estimación)':'No disponible'],
+  ['Protección de percusión',cfg.cumbia?'Activa · cruce breve de cumbia':'Mezcla habitual'],
+  ['EQ automático',$('autoEQ').checked?'Activado':'Desactivado']
+ ];
+ for(const [label,value] of lines){const row=document.createElement('div');row.className='historyitem';const l=document.createElement('strong');l.textContent=label;const v=document.createElement('span');v.textContent=value;row.append(l,v);box.append(row)}
+ $('decisionStatus').textContent=cfg.cumbia?'Cumbia: prioriza una sola base rítmica dominante.':'Se conserva el motor de transición estable. El análisis es orientativo.';
+}
+function renderUpcoming(){
+ const box=$('upcomingList');if(!box)return;
+ const planned=planUpcoming(5);
+ box.replaceChildren();
+ if(!planned.length){const empty=document.createElement('div');empty.className='empty';empty.textContent='Elegí un tema y cargá al menos dos canciones en la carpeta.';box.append(empty)}
+ planned.forEach((i,n)=>{
+   const t=tracks[i],row=document.createElement('div');row.className='historyitem';
+   const title=document.createElement('strong');title.textContent=(n+1)+'. '+t.name;
+   const meta=document.createElement('span');meta.textContent=(t.bpm?t.bpm+' BPM':'BPM pendiente')+' · '+(t.energy!=null?'energía '+Math.round(t.energy*100)+'%':'energía pendiente');
+   row.append(title,meta);box.append(row);
+ });
+ renderDecision();
+ $('planInfo').textContent=planned.length?'Plan estimado de '+planned.length+' canciones · '+($('djSelectionMode').selectedOptions[0]?.textContent||'Fiesta')+'. Se recalcula con los análisis y al avanzar.':'Sin candidatos disponibles.';
+}
+
+const MIX_PREF_KEY='autodj-genre-mix-v10-1';
+let learnedMix={};
+try{const saved=JSON.parse(localStorage.getItem(MIX_PREF_KEY)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved))learnedMix=saved}catch(e){}
+function mixGenre(a,b){return a?.genre&&a.genre!=='otros'&&a.genre===b?.genre?a.genre:null}
+function learnedEarly(a,b){
+ const g=mixGenre(a,b),v=g==null?null:Number(learnedMix[g]);
+ return Number.isFinite(v)&&v>=8&&v<=25?v:null;
+}
+function showLearnedMix(){
+ const entries=Object.entries(learnedMix).filter(([g,v])=>['cumbia','cuarteto','regueton'].includes(g)&&Number.isFinite(Number(v)));
+ $('learnGenreLabel').textContent=entries.length?entries.map(([g,v])=>`${genreNames[g]}: ${v} s`).join(' · '):'Sin ajustes guardados';
+}
+function isProtectedCumbiaPair(a,b){return !!($('cumbiaProtect')?.checked&&a?.genre==='cumbia'&&b?.genre==='cumbia')}
+function adaptiveMixSettings(a,b){
+ const cumbia=isProtectedCumbiaPair(a,b);
+ const automatic=!!$('adaptiveTransition')?.checked;
+ const fade=cumbia?Math.min(3.5,djFadeSeconds(a)):djFadeSeconds(a);
+ // La prueba del usuario encontró que 9 segundos de anticipación en cumbia
+ // evita la pausa sin alargar el solapamiento de las bases rítmicas.
+ const learned=automatic?learnedEarly(a,b):null;
+ const early=learned??(automatic&&cumbia?9:null);
+ return {cumbia,fade,early};
+}
+function djFadeSeconds(track){
+ const bpm=track?.bpm;
+ if(!bpm)return Math.max(3,+$('fade').value);
+ // Prefer a musical 8/16/32-beat transition close to requested fade duration.
+ const desired=Math.max(3,+$('fade').value);
+ const candidates=[8,16,32].map(beats=>({beats,seconds:beats*60/bpm}));
+ return candidates.sort((a,b)=>Math.abs(a.seconds-desired)-Math.abs(b.seconds-desired))[0].seconds;
+}
+let preanalysisTimer=null;
+function prepareNextAnalysis(){
+ // Una sola decodificación a la vez: evita sobrecargar teléfonos Android.
+ if(preanalysisTimer)clearTimeout(preanalysisTimer);
+ preanalysisTimer=setTimeout(runPreanalysis,350);
+}
+async function runPreanalysis(){
+ preanalysisTimer=null;
+ if(current<0||!autoDJ||analysisBusy||transition||preparingMix)return;
+ const planned=planUpcoming(3);
+ const pending=planned.map(i=>tracks[i]).filter(t=>t&&!t.bpm&&t.analysis!=='Analizando'&&!String(t.analysis).startsWith('Error de análisis'));
+ const indicator=$('preanalysisStatus');
+ if(indicator)indicator.textContent=`Análisis anticipado: ${planned.length-pending.length}/${planned.length} próximas canciones con BPM disponible${pending.length?' · procesando en segundo plano…':' · listo'}`;
+ if(!pending.length){renderUpcoming();return;}
+ // Solo un tema por turno. El siguiente se programa al finalizar, sin bloquear el audio.
+ await analyzeTrack(pending[0]);
+ renderUpcoming();
+ if(current>=0&&autoDJ&&!transition)prepareNextAnalysis();
+}
+function clearTransition(){if(transitionTimer){clearInterval(transitionTimer);transitionTimer=null}if(transition){try{decks[transition.incoming].pause()}catch(e){}transition=null}resetMixEQ()}
+// Preparación silenciosa del deck secundario. No altera el deck que está sonando.
+function prepareIncomingDeck(){
+ if(transition||preparingMix||current<0||($('hardCutMode')?.checked&&proPhraseState))return;
+ const next=nextIndex(), inc=decks[1-activeDeck];
+ if(next<0||next===current||!tracks[next])return;
+ if(preparedTrack===next&&inc.readyState>=2)return;
+ inc.pause();
+ if(inc.src!==tracks[next].url){inc.src=tracks[next].url;inc.load()}
+ preparedTrack=next;
+}
+function waitForDeckReady(el,timeout=1800){
+ if(el.readyState>=2)return Promise.resolve(true);
+ return new Promise(resolve=>{
+   let finished=false;
+   const done=ok=>{if(finished)return;finished=true;clearTimeout(timer);el.removeEventListener('canplay',onReady);el.removeEventListener('error',onError);resolve(ok)};
+   const onReady=()=>done(true),onError=()=>done(false);
+   el.addEventListener('canplay',onReady);el.addEventListener('error',onError);
+   const timer=setTimeout(()=>done(el.readyState>=2),timeout);
+   if(el.readyState>=2)done(true);
+ });
+}
+function waitForSeek(el,timeout=350){
+ if(!el.seeking)return Promise.resolve();
+ return new Promise(resolve=>{let finished=false;const done=()=>{if(finished)return;finished=true;clearTimeout(timer);el.removeEventListener('seeked',done);resolve()};const timer=setTimeout(done,timeout);el.addEventListener('seeked',done)});
+}
+// V10.4: extender una única zona suave cerca del final, con límites estrictos.
+// No se considera una detección de voz: si no hay evidencia rítmica sólida no hay loop.
+function safeRemixWindow(track,element){
+ if(!remixMode||!track||remixUsedTrack===track||!element?.duration||!Number.isFinite(element.duration))return null;
+ if($('autonomousRemix')?.checked && autonomousSongNumber-lastAutonomousRemixSong<3)return null;
+ const mode=$('remixIntensity')?.value||'suave';
+ const minConfidence=($('autonomousRemix')?.checked?{suave:.68,medio:.78,fiesta:.88}:{suave:.55,medio:.68,fiesta:.82})[mode]||.68;
+ if(!(track.beatConfidence>=minConfidence)||!(track.bpm>=65&&track.bpm<=170))return null;
+ const beats={suave:4,medio:8,fiesta:16}[mode]||4;
+ const beat=60/track.bpm, length=beat*beats;
+ if(length<1.4||length>15)return null;
+ const duration=element.duration;
+ const zones=(track.sections||[]).filter(z=>z.level==='suave'&&Number.isFinite(z.start)&&Number.isFinite(z.end)&&z.end>z.start);
+ // Priorizar zonas cercanas al final, pero nunca iniciar un loop demasiado cerca del cambio de tema.
+ const candidates=zones.filter(z=>z.end-z.start>=length+1.0&&z.start>=duration-55&&z.end<=duration-3&&z.end>=duration-28);
+ if(!candidates.length)return null;
+ const zone=candidates.sort((a,b)=>b.end-a.end)[0];
+ // Alinear los extremos al pulso estimado, no solamente a segundos arbitrarios.
+ const offset=Number.isFinite(track.beatOffset)?track.beatOffset:0;
+ const endBeat=Math.floor((zone.end-.35-offset)/beat);
+ const end=offset+endBeat*beat;
+ const start=end-length;
+ if(start<zone.start+.25||end>zone.end-.25||end>=duration-2)return null;
+ return {start,end,beats};
+}
+function maybeSafeRemix(index,el){
+ if(index!==activeDeck||transition||preparingMix||!autoDJ||!remixMode||loopOn)return;
+ const track=tracks[current];if(!track)return;
+ if(autonomousTrack!==track){autonomousTrack=track;autonomousSongNumber++;remixLoopState=null;}
+ if(remixLoopState){
+   if(remixLoopState.track!==track){remixLoopState=null;return}
+   if(el.currentTime>=remixLoopState.end-.06){
+     // Una sola repetición: después de ella, reproducir normalmente.
+     el.currentTime=remixLoopState.start;
+     remixUsedTrack=track;
+     lastAutonomousRemixSong=autonomousSongNumber;
+     remixLoopState=null;
+     if($('autonomousStatus'))$('autonomousStatus').textContent='Loop aplicado; las próximas canciones seguirán con mezcla normal para evitar excesos.';
+     updateRecInfo('Auto Remix PRO: loop suave aplicado una sola vez; continúa la canción.');
+   }
+   return;
+ }
+ const window=safeRemixWindow(track,el);
+ if(window&&el.currentTime>=window.start&&el.currentTime<window.start+.35){
+   remixLoopState={...window,track};
+   updateRecInfo('Auto Remix PRO: preparando un loop de '+(window.beats/4)+' compás(es) estimados.');
+ }
+}
+function incomingBeatSeek(outgoingTrack,incomingTrack,outgoingElement,rate){
+ if(!$('beatSync')?.checked||!$('bpmMatch')?.checked)return null;
+ if(!outgoingTrack?.bpm||!incomingTrack?.bpm||!Number.isFinite(outgoingTrack.beatOffset)||!Number.isFinite(incomingTrack.beatOffset))return null;
+ if((outgoingTrack.beatConfidence??0)<.18||(incomingTrack.beatConfidence??0)<.18)return null;
+ const outPeriod=60/outgoingTrack.bpm, inPeriod=60/incomingTrack.bpm;
+ const effectiveOut=outPeriod/(outgoingElement.playbackRate||1),effectiveIn=inPeriod/rate;
+ if(Math.abs(effectiveOut-effectiveIn)>.055)return null;
+ // currentTime y beatOffset están ambos en segundos del archivo: no multiplicar
+ // por playbackRate, porque duplicaría el cambio de velocidad en el cálculo.
+ const phase=((outgoingElement.currentTime-outgoingTrack.beatOffset)/outPeriod%1+1)%1;
+ const seek=incomingTrack.beatOffset+phase*inPeriod;
+ return Number.isFinite(seek)&&seek>=0&&seek<1.5?seek:null;
+}
+
+async function startCrossfade(manual=false){
+ if(preparingMix)return;
+ if(transition||current<0||scopedIndices().length<2||(!manual&&(!autoDJ||$('repeat').checked||loopOn)))return;
+ const outgoing=activeDeck, incoming=1-activeDeck, next=nextIndex(), oldTrack=tracks[current], nextTrackData=tracks[next];
+ if(next<0||next===current)return;
+ if(requestedNextTrack===nextTrackData)requestedNextTrack=null;
+ const mixSettings=adaptiveMixSettings(oldTrack,nextTrackData);
+ const cumbiaPair=mixSettings.cumbia;
+ const out=decks[outgoing], inc=decks[incoming], fade=mixSettings.fade;
+ const early=+$("earlyMix").value;
+ const remaining=out.duration-out.currentTime;
+ // Si el tema es corto, evitar cortarlo excesivamente pronto.
+ const startAt=mixSettings.early??phraseAwareStart(oldTrack,out.duration,fade);
+ if(!manual&&(!isFinite(out.duration)||remaining>startAt||remaining<0.25))return;
+ preparingMix=true;
+ audioGraph();if(ctx&&ctx.state==='suspended')ctx.resume();
+ inc.pause();if(inc.src!==nextTrackData.url){inc.src=nextTrackData.url;inc.load()}
+ const ready=await waitForDeckReady(inc);
+ if(!ready||transition||activeDeck!==outgoing||current<0){preparingMix=false;return}
+ inc.currentTime=0;inc.playbackRate=1;
+ const oldBpm=oldTrack?.bpm?(oldTrack.bpm*(out.playbackRate||1)):null;
+ let rate=1; if(!cumbiaPair&&$('bpmMatch')?.checked&&oldBpm&&nextTrackData.bpm){rate=oldBpm/nextTrackData.bpm;rate=Math.max(0.94,Math.min(1.06,rate));} inc.playbackRate=rate;
+ let beatSeek=cumbiaPair?null:incomingBeatSeek(oldTrack,nextTrackData,out,rate);
+ if(beatSeek!==null){try{inc.currentTime=beatSeek;await waitForSeek(inc)}catch(e){}}
+ if(activeDeck!==outgoing||transition){preparingMix=false;return}
+ // Aplicar la misma espera de pulso a AutoDJ y al botón manual.
+ // En final de tema no esperar si eso puede dejar silencio.
+ const safeRemaining=out.duration-out.currentTime;
+ if(!cumbiaPair&&$('beatSync')?.checked&&oldTrack?.bpm&&(oldTrack.beatConfidence??0)>=.18&&safeRemaining>fade+.5){
+   const period=60/oldTrack.bpm;
+   const phase=((out.currentTime-(oldTrack.beatOffset||0))/period%1+1)%1;
+   const until=(1-phase)*period/(out.playbackRate||1);
+   if(until>.025&&until<.35)await new Promise(r=>setTimeout(r,until*1000));
+ }
+ // Recalcular el seek tras la espera: el tema saliente avanzó mientras cargaba.
+ const refreshedSeek=cumbiaPair?null:incomingBeatSeek(oldTrack,nextTrackData,out,rate);
+ beatSeek=refreshedSeek;
+ if(refreshedSeek!==null&&Math.abs(inc.currentTime-refreshedSeek)>.018){
+   try{inc.currentTime=refreshedSeek;await waitForSeek(inc)}catch(e){}
+ }
+ if(activeDeck!==outgoing||transition){preparingMix=false;return}
+ // Esperar hasta el siguiente pulso estimado, manteniendo el tema saliente audible.
+ // Nunca retener más de 450 ms para no crear silencios en finales ajustados.
+
+ if(nodes.length){resetCreativeFX();resetMixEQ();resetToneEQ();nodes[outgoing].gain.gain.value=(+$('volume').value/100)*djGainFactor(tracks[current]);nodes[incoming].gain.gain.value=0}
+ inc.play().then(()=>{
+   preparingMix=false;preparedTrack=-1;
+   transition={outgoing,incoming,next,start:performance.now(),duration:(manual?Math.max(3,fade):Math.min(fade,Math.max(0.35,out.duration-out.currentTime)))*1000};
+   if($('phraseInfo'))$('phraseInfo').textContent=($('phraseMix')?.checked&&oldTrack?.beatConfidence>=.18&&Number.isFinite(oldTrack?.beatOffset))?'Entrada calculada con bloques rítmicos estimados; no equivale a reconocer frases reales.':'Entrada clásica o zona de energía suave (si está disponible).';
+   $('mixMessage').textContent=`${manual?'Salto DJ armónico · ':''}Siguiente elegido: ${nextTrackData.name} · ${oldTrack.bpm||'?'} → ${nextTrackData.bpm||'?'} BPM · velocidad ${Math.round(rate*100)}% · fundido DJ de ${fade.toFixed(1)} s · ${beatSeek!==null?"pulsos alineados (estimados)":"sin alineación de pulsos"} · ${cumbiaPair?"cumbia: entrada 9 s antes y graves alternados":"control de medios V3"}${(!oldTrack.bpm||!nextTrackData.bpm)?' (BPM pendiente: elección entre temas no recientes)':''}.`;
+   setCurrentUI(next);logTrack(nextTrackData);
+   transitionTimer=setInterval(()=>{
+     if(!transition)return;
+     const p=Math.min(1,(performance.now()-transition.start)/transition.duration),vol=+$('volume').value/100;
+     if(nodes.length){nodes[outgoing].gain.gain.value=vol*djGainFactor(tracks[current])*Math.cos(p*Math.PI/2);nodes[incoming].gain.gain.value=vol*djGainFactor(tracks[next])*Math.sin(p*Math.PI/2);adaptiveMelodyEQ(outgoing,incoming,p);adaptiveToneEQ(outgoing,incoming,p);if(cumbiaPair)cumbiaBassSwap(outgoing,incoming,p);applyCreativeFX(outgoing,p,transition.duration/1000)}
+     if(p>=1){clearInterval(transitionTimer);transitionTimer=null;out.pause();out.currentTime=0;out.playbackRate=1;activeDeck=incoming;current=next;transition=null;resetCreativeFX();resetMixEQ();resetToneEQ();loadCutForCurrent();if(nodes.length){nodes[outgoing].gain.gain.value=0;nodes[incoming].gain.gain.value=vol*djGainFactor(tracks[current])}status('AUTO DJ ACTIVO');$('playBtn').textContent='⏸ Pausa';if(!nextTrackData.bpm&&!String(nextTrackData.analysis).startsWith('Error de análisis'))analyzeTrack(nextTrackData);else prepareNextAnalysis();setTimeout(prepareIncomingDeck,250)}
+   },35);
+ }).catch(()=>{preparingMix=false;inc.pause();resetCreativeFX();resetMixEQ();resetToneEQ();$('mixMessage').textContent='No se pudo iniciar el tema siguiente. Se continuará al terminar el actual.'});
+}
+const ANALYSIS_CACHE_KEY='autodj-analysis-v8';
+function sectionSummary(t){if(!t)return 'Elegí una canción para ver su análisis.';if(!t.sections?.length)return 'Mapa de energía pendiente. Se genera al analizar la canción.';const low=t.sections.filter(x=>x.level==='suave'&&x.end>x.start+.2);const high=t.sections.filter(x=>x.level==='intensa'&&x.end>x.start+.2);const f=x=>Math.floor(x/60)+':'+String(Math.floor(x%60)).padStart(2,'0');return 'Energía estimada: '+low.length+' zonas suaves, '+high.length+' intensas. Posibles espacios: '+(low.slice(0,5).map(x=>f(x.start)+'–'+f(x.end)).join(', ')||'sin zonas suaves claras')+'. No implica ausencia de voces.';}
+function showSectionInfo(t){
+ const e=$('sectionInfo');if(e)e.textContent=sectionSummary(t);
+ const info=$('structureInfo');if(!info)return;
+ const st=estimateStructure(t);
+ const fmtPart=x=>x?fmt(x.start)+'–'+fmt(x.end):'no identificada';
+ info.textContent=st?'Zonas estimadas por energía · Introducción suave: '+fmtPart(st.intro)+' · Final suave: '+fmtPart(st.outro)+'. No equivale a detección de voces o estribillos. Ajuste máximo: 2 s.':'V9.3: introducción y final pendientes de análisis; el motor de mezcla conserva su comportamiento habitual.';
+}
+function analysisKey(t){return [t.file?.webkitRelativePath||t.name,t.size,t.file?.lastModified||0].join('|')}
+function readAnalysisCache(t){
+ try{const all=JSON.parse(localStorage.getItem(ANALYSIS_CACHE_KEY)||'{}');const v=all[analysisKey(t)];
+ if(v&&v.pulseVersion===2&&Array.isArray(v.sections)&&v.sections.length&&(v.bpm==null||(v.bpm>=60&&v.bpm<=200))){t.bpm=v.bpm;t.energy=v.energy??null;t.duration=v.duration||t.duration;t.sections=v.sections.filter(x=>x.end>x.start+.1);t.beatConfidence=v.beatConfidence??null;t.beatOffset=v.beatOffset??null;t.gainFactor=Number.isFinite(v.gainFactor)?Math.min(1.4,Math.max(.7,v.gainFactor)):1;t.analysis='Análisis guardado';showSectionInfo(t);return true;}}
+ catch(e){}return false;
+}
+function saveAnalysisCache(t){
+ try{const all=JSON.parse(localStorage.getItem(ANALYSIS_CACHE_KEY)||'{}');all[analysisKey(t)]={pulseVersion:2,bpm:t.bpm,energy:t.energy,beatConfidence:t.beatConfidence,beatOffset:t.beatOffset,gainFactor:t.gainFactor,duration:t.duration,sections:t.sections||[]};
+ const keys=Object.keys(all);if(keys.length>300)keys.slice(0,keys.length-300).forEach(k=>delete all[k]);
+ localStorage.setItem(ANALYSIS_CACHE_KEY,JSON.stringify(all))}catch(e){}
+}
+function estimateStructure(t){
+ const sections=(t?.sections||[]).filter(x=>x.end>x.start+.2);
+ if(!sections.length)return null;
+ const duration=t.duration||sections[sections.length-1].end;
+ const low=sections.filter(x=>x.level==='suave');
+ const intro=low.find(x=>x.start<Math.min(24,duration*.12));
+ const outro=[...low].reverse().find(x=>x.end>duration-Math.min(24,duration*.12));
+ return {intro:intro?{start:intro.start,end:intro.end}:null,outro:outro?{start:outro.start,end:outro.end}:null};
+}
+function structureAwareStart(track,duration,fade,base){
+ if(!$('structureMix')?.checked||!track?.sections?.length)return base;
+ const target=duration-base;
+ // Mantener intacto el fundido y permitir como máximo 2 segundos de ajuste.
+ const candidates=track.sections.filter(x=>x.level==='suave'&&x.end>x.start+.2)
+   .flatMap(x=>[x.start,x.end].filter(at=>at>=target-2&&at<=target+2&&duration-at>=fade+1));
+ if(!candidates.length)return base;
+ candidates.sort((a,b)=>Math.abs(a-target)-Math.abs(b-target));
+ return duration-candidates[0];
+}
+function phraseAwareStart(track,duration,fade){
+ // Mantener el margen probado; nunca alargar el fundido ni cortar una canción antes de tiempo.
+ const early=Math.min(+$('earlyMix').value,fade+3,Math.max(fade+1,duration*.25));
+ if(!track?.bpm)return structureAwareStart(track,duration,fade,early);
+ const usePhrases=$('phraseMix')?.checked&&track.beatConfidence>=.18&&Number.isFinite(track.beatOffset);
+ const target=duration-early;
+ const candidates=[];
+ const blocks=usePhrases?[32,16,8]:[8];
+ for(const beats of blocks){
+   const period=beats*60/track.bpm;
+   const offset=usePhrases?track.beatOffset:0;
+   for(const n of [Math.floor((target-offset)/period),Math.ceil((target-offset)/period)]){
+     const at=offset+n*period;
+     const remaining=duration-at;
+     if(remaining>=fade+.4&&remaining<=early+2&&at>=0){
+       candidates.push({remaining,beats,delta:Math.abs(remaining-early)});
+     }
+   }
+ }
+ // Preferir estar cerca del inicio solicitado antes que imponer una frase demasiado alejada.
+ candidates.sort((a,b)=>a.delta-b.delta||(b.beats-a.beats));
+ return structureAwareStart(track,duration,fade,candidates[0]?.remaining??early);
+}
+
+
+// V14.5: fase del pulso a partir de ataques locales y votos circulares.
+// Confianza conservadora: un valor bajo no habilita cortes anticipados.
+function djEstimatePulse(onsets,rate,bpm){
+ if(!bpm||!onsets?.length||!rate)return {offset:null,confidence:0};
+ const frames=rate*60/bpm;
+ if(frames<2)return {offset:null,confidence:0};
+ const bins=48,votes=new Float64Array(bins);
+ let events=0,energy=0;
+ for(let j=2;j<onsets.length-2;j++){
+   const v=onsets[j];
+   if(v<=onsets[j-1]||v<onsets[j+1]||v<=0)continue;
+   const weight=Math.sqrt(v);
+   const phase=((j/frames)%1+1)%1;
+   const center=phase*bins;
+   for(let k=-2;k<=2;k++){
+     const bin=(Math.floor(center)+k+bins)%bins;
+     const d=Math.abs(center-(Math.floor(center)+k+.5));
+     votes[bin]+=weight*Math.max(0,1-d/2.5);
+   }
+   energy+=weight;events++;
+ }
+ if(events<16||energy<=0)return {offset:null,confidence:0};
+ let peak=0;
+ for(let i=1;i<bins;i++)if(votes[i]>votes[peak])peak=i;
+ const avg=votes.reduce((a,b)=>a+b,0)/bins;
+ const contrast=avg>0?votes[peak]/avg:0;
+ const confidence=Math.max(0,Math.min(1,(contrast-1)/5));
+ return {offset:((peak+.5)/bins)*(60/bpm),confidence};
+}
+async function analyzeTrack(t){
+ if(!t||analysisBusy)return;
+ if(t.bpm&&t.sections?.length&&Number.isFinite(t.gainFactor))return;
+ if(readAnalysisCache(t)){renderTracks();renderUpcoming();return;}
+ analysisBusy=true;t.analysis='Analizando';renderTracks();
+ try{audioGraph();if(!ctx)throw Error('AudioContext no disponible');const ab=await t.file.arrayBuffer();const buf=await ctx.decodeAudioData(ab.slice(0));const sr=buf.sampleRate,data=buf.getChannelData(0),step=Math.max(1,Math.floor(sr/11025)),hop=256,env=[];
+ for(let i=0;i<data.length;i+=hop*step){let sum=0,n=0,end=Math.min(data.length,i+hop*step);for(let j=i;j<end;j+=step){sum+=data[j]*data[j];n++}env.push(Math.sqrt(sum/Math.max(1,n)))}
+ const totalRms=Math.sqrt(env.reduce((a,b)=>a+b*b,0)/Math.max(1,env.length));
+ t.gainFactor=totalRms>0?Math.min(1.18,Math.max(.78,0.12/totalRms)):1;
+ t.energy=Math.min(1,totalRms*3);
+ // Mapa de energía por bloques de ~8 segundos; no es separación de instrumentos.
+ const rate=sr/(hop*step);const win=Math.max(1,Math.round(8*rate)), blocks=[];
+ for(let z=0;z<env.length;z+=win){const part=env.slice(z,z+win);const rms=Math.sqrt(part.reduce((a,v)=>a+v*v,0)/Math.max(1,part.length));if(Math.min(buf.duration,(z+win)/rate)-z/rate>0.2)blocks.push({start:z/rate,end:Math.min(buf.duration,(z+win)/rate),rms})}
+ const sorted=blocks.map(x=>x.rms).sort((a,b)=>a-b), med=sorted[Math.floor(sorted.length/2)]||0;
+ t.sections=blocks.map(b=>({start:Math.round(b.start*10)/10,end:Math.round(b.end*10)/10,level:b.rms<med*.72?'suave':b.rms>med*1.3?'intensa':'media'}));const smooth=env.map((v,i)=>Math.max(0,v-(env[i-1]||0)));let bestLag=0,best=-Infinity;
+ for(let bpm=65;bpm<=190;bpm++){const lag=Math.round(rate*60/bpm);if(lag<1||lag>=smooth.length/2)continue;let score=0;for(let j=lag;j<smooth.length;j++)score+=smooth[j]*smooth[j-lag];if(score>best){best=score;bestLag=lag}}
+ let bpm=bestLag?Math.round(rate*60/bestLag):null;if(bpm&&bpm<90)bpm*=2;if(bpm&&bpm>180)bpm=Math.round(bpm/2);
+ // Estimación circular: evita errores de redondeo en compases largos.
+ const pulse=djEstimatePulse(smooth,rate,bpm);
+ t.beatConfidence=pulse.confidence;
+ t.beatOffset=pulse.offset;
+
+ t.bpm=bpm;t.duration=buf.duration;t.analysis=bpm?'Análisis Pro':'Sin BPM estimado';saveAnalysisCache(t);
+ if(tracks[current]===t){$('bpmVal').textContent=bpm||'—';$('keyVal').textContent=bpm?(t.beatConfidence!=null?'Pulso '+Math.round(t.beatConfidence*100)+'%':'4/4 estimado'):'—';$('analysisLabel').textContent='Análisis: '+t.analysis;$('duration').textContent=fmt(buf.duration)}
+ renderTracks();showSectionInfo(t);renderUpcoming();
+ }catch(e){t.analysis='Error de análisis: '+(e?.message||'desconocido');renderTracks();showSectionInfo(t);$('sectionInfo').textContent=t.analysis}
+ finally{analysisBusy=false;if(autoDJ&&current>=0&&!transition)prepareNextAnalysis();}
+}
+function synth(kind){audioGraph();if(!ctx)return;if(ctx.state==='suspended')ctx.resume();const now=ctx.currentTime,vol=+$('padVol').value/100*.35,g=ctx.createGain();g.gain.setValueAtTime(Math.max(.001,vol),now);g.gain.exponentialRampToValueAtTime(.001,now+.2);g.connect(ctx.destination);const osc=ctx.createOscillator(),buf=ctx.createBuffer(1,Math.floor(ctx.sampleRate*.25),ctx.sampleRate),ch=buf.getChannelData(0);for(let i=0;i<ch.length;i++)ch[i]=Math.random()*2-1;const noise=ctx.createBufferSource(),filter=ctx.createBiquadFilter();filter.connect(g);if(kind==='kick'||kind==='tom'){osc.type='sine';osc.frequency.setValueAtTime(kind==='kick'?140:190,now);osc.frequency.exponentialRampToValueAtTime(kind==='kick'?42:75,now+.16);osc.connect(g);osc.start(now);osc.stop(now+.19)}else if(kind==='cowbell'){osc.type='square';osc.frequency.setValueAtTime(540,now);osc.connect(g);osc.start(now);osc.stop(now+.13)}else{noise.buffer=buf;filter.type='highpass';filter.frequency.value=kind==='hat'?6500:kind==='clap'?1200:900;noise.connect(filter);noise.start(now);noise.stop(now+(kind==='hat'?.07:.16))}}
+function updateLoopLabels(){$('loopStartText').textContent=(+$('loopStart').value).toFixed(1);$('loopEndText').textContent=(+$('loopEnd').value).toFixed(1);loopA=+$('loopStart').value;loopB=+$('loopEnd').value}
+function updateCutLabels(){ $('cutStartText').textContent=(+$('cutStart').value).toFixed(1)+' s'; $('cutEndText').textContent=(+$('cutEnd').value).toFixed(1)+' s'; if(current>=0){const t=tracks[current];t.cutStart=+$('cutStart').value;t.cutEnd=+$('cutEnd').value;t.cutEnabled=$('cutEnabled').checked;} }
+function loadCutForCurrent(){const t=tracks[current];showSectionInfo(t);const dur=Math.max(1,t?.duration||600);$('cutStart').max=dur;$('cutEnd').max=dur;$('cutStart').value=t?.cutStart||0;$('cutEnd').value=t?.cutEnd||0;$('cutEnabled').checked=!!t?.cutEnabled;updateCutLabels();}
+function updateRecInfo(message){$('recInfo').textContent=message}
+$('creativeFXMode').onchange=e=>{$('creativeFXLabel').textContent=({suave:'Suave',medio:'Medio',fiesta:'Fiesta'})[e.target.value]||'Suave';resetCreativeFX()};
+$('creativeFX').onchange=e=>{if(!e.target.checked)resetCreativeFX();$('creativeFXStatus').textContent=e.target.checked?'Efectos activos: se aplican solo al tema saliente y al final de una mezcla.':'Efectos desactivados: motor de mezcla original.'};
+$('autonomousRemix').onchange=e=>{remixLoopState=null;$('autonomousStatus').textContent=e.target.checked?'Modo seguro: máximo un loop cada 3 canciones, con mayor confianza rítmica.':'Modo clásico V10.4: un loop por canción cuando cumple sus requisitos.';};
+$('remixIntensity').onchange=e=>{$('remixIntensityLabel').textContent=({suave:'Suave',medio:'Medio',fiesta:'Fiesta'})[e.target.value]||'Suave';remixLoopState=null;};
+$('remixBtn').onclick=()=>{remixMode=!remixMode;$('remixBtn').textContent=remixMode?'🎛️ Remix: ON':'🎛️ Remix: OFF';$('remixBtn').classList.toggle('lime',remixMode);$('remixBtn').setAttribute('aria-pressed',String(remixMode));if(!remixMode)remixLoopState=null;updateRecInfo(remixMode?'Auto Remix PRO: solo repite una zona suave si la confianza rítmica es suficiente para la intensidad elegida; si no, mezcla normalmente.':'Remix desactivado: mezclas normales.');};
+$('recBtn').onclick=async()=>{
+ if(recording&&recording.state==='recording'){
+   $('recBtn').disabled=true;recording.stop();return;
+ }
+ if(!window.MediaRecorder){updateRecInfo('Este navegador no admite grabación de audio MediaRecorder. Probá Chrome actualizado.');return}
+ try{
+   audioGraph();if(!ctx||!recordDest){updateRecInfo('No se pudo crear el canal de grabación.');return}
+   if(ctx.state==='suspended')await ctx.resume();
+   const options={};const formats=['audio/webm;codecs=opus','audio/webm'];
+   const supported=formats.find(x=>MediaRecorder.isTypeSupported(x));if(supported)options.mimeType=supported;
+   recordingChunks=[];
+   const rec=new MediaRecorder(recordDest.stream,options);recording=rec;recordStarted=Date.now();
+   rec.ondataavailable=e=>{if(e.data&&e.data.size)recordingChunks.push(e.data)};
+   rec.onerror=()=>updateRecInfo('Error de grabación. Verificá el espacio disponible.');
+   rec.onstop=()=>{
+     const mime=rec.mimeType||'audio/webm';const blob=new Blob(recordingChunks,{type:mime});
+     recordingChunks=[];recording=null;$('recBtn').disabled=false;$('recBtn').textContent='⏺ Grabar mezcla';
+     if(!blob.size){updateRecInfo('No se grabó audio. Iniciá la reproducción antes de grabar.');return}
+     const url=URL.createObjectURL(blob),a=document.createElement('a');
+     a.href=url;a.download='AutoDJ_Mezcla_'+new Date().toISOString().replace(/[:.]/g,'-')+'.webm';document.body.appendChild(a);a.click();a.remove();
+     setTimeout(()=>URL.revokeObjectURL(url),60000);
+     updateRecInfo('Grabación finalizada ('+Math.round(blob.size/1024)+' KB). Revisá Descargas. Si no se descarga, probá desde Chrome.');
+   };
+   rec.start(1000);$('recBtn').textContent='⏹ Detener y guardar';updateRecInfo('Grabando el audio de AutoDJ… Tocá Detener y guardar para descargar el archivo.');
+ }catch(e){recording=null;$('recBtn').disabled=false;updateRecInfo('No se pudo grabar: '+(e.message||e))}
+};
+$('genreFilter').onchange=renderTracks;
+$('folderScope').onchange=()=>{if(requestedNextTrack&&!scopedIndices().some(x=>x.t===requestedNextTrack))requestedNextTrack=null;renderTracks();if(autoDJ)prepareNextAnalysis();renderUpcoming();prepareIncomingDeck()};
+$('djSelectionMode').onchange=e=>{$('djSelectionLabel').textContent=({fiesta:'Fiesta',equilibrado:'Equilibrado',progresivo:'Progresivo'})[e.target.value]||'Fiesta';renderUpcoming()};
+$('refreshPlan').onclick=()=>{renderUpcoming();prepareIncomingDeck()};
+$('refreshDecision').onclick=renderDecision;
+$('adaptiveTransition').onchange=renderDecision;
+$('cumbiaProtect').onchange=renderDecision;
+$('shuffle').onchange=renderUpcoming;$('bpmMatch').onchange=renderUpcoming;$('noRepeat').onchange=renderUpcoming;
+$('autoEQ').onchange=()=>{if(!$('autoEQ').checked)resetToneEQ();renderDecision()};
+$('earlyMix').oninput=e=>{$('earlyMixText').textContent=e.target.value+' s';renderDecision()};
+$('saveGenreMix').onclick=()=>{
+ const t=tracks[current],g=t?.genre;
+ if(!g||g==='otros'){$('learnGenreInfo').textContent='Primero reproducí una canción con género reconocido (cumbia, cuarteto o reguetón).';return}
+ const v=Number($('earlyMix').value);
+ learnedMix[g]=v;
+ try{localStorage.setItem(MIX_PREF_KEY,JSON.stringify(learnedMix))}catch(e){$('learnGenreInfo').textContent='No se pudo guardar en este navegador.';return}
+ $('learnGenreInfo').textContent=`Guardado: ${genreNames[g]} → ${v} s de anticipación. Se aplicará cuando ambos temas sean de ${genreNames[g]} y esté activo el modo automático.`;
+ showLearnedMix();renderDecision();
+};
+$('clearGenreMix').onclick=()=>{learnedMix={};try{localStorage.removeItem(MIX_PREF_KEY)}catch(e){}showLearnedMix();renderDecision();$('learnGenreInfo').textContent='Ajustes borrados. Se usarán los valores de V10.0.'};
+showLearnedMix();
+
+$('chooseFolder').onclick=()=>$('folderInput').click();$('chooseFiles').onclick=()=>$('fileInput').click();$('folderInput').onchange=e=>{const files=Array.from(e.target.files||[]);e.target.value='';if(files.length)addFiles(files,true)};$('fileInput').onchange=e=>{const files=Array.from(e.target.files||[]);e.target.value='';if(files.length)addFiles(files)};
+if(djLocalFile){djStorageAvailable=false;$('libraryInfo').textContent=djStorageWarning()}else djRestoreLibrary();
+$('proPhraseBars').onchange=()=>{proPhraseState=null;proPhraseMemory.clear()};$('proRepeatPhrase').onchange=()=>{proPhraseState=null};
+$('testHardCut').onclick=()=>{$('hardCutInfo').textContent='Organic Mix no fuerza cortes: activá Auto DJ; el sistema busca y prepara un punto compatible.'};
+$('hardCutMode').onchange=e=>{proPhraseState=null;$('hardCutInfo').textContent=e.target.checked?'Organic Mix activo: espera una frontera compatible, sin loops forzados.':'Modo clásico restaurado. La versión original no se modifica.';renderUpcoming();prepareIncomingDeck()};
+$('back10Btn').onclick=()=>djSeekSeconds(-10);
+$('forward10Btn').onclick=()=>djSeekSeconds(10);
+$('progress').parentElement.style.cursor='pointer';
+$('progress').parentElement.title='Tocá para adelantar o retroceder';
+$('progress').parentElement.addEventListener('click',e=>{const el=decks[activeDeck];if(current<0||!Number.isFinite(el.duration)||el.duration<=0)return;if(transition)clearTransition();const rect=e.currentTarget.getBoundingClientRect();const fraction=Math.max(0,Math.min(1,(e.clientX-rect.left)/rect.width));el.currentTime=Math.min(el.duration-.2,Math.max(0,fraction*el.duration));});
+$('autoBtn').onclick=()=>{if(!tracks.length){$('mixMessage').textContent='Cargá primero una carpeta o algunos archivos.';return}autoDJ=!autoDJ;if(autoDJ&&$('hardCutMode')){$('hardCutMode').checked=true;proPhraseState=null;}$('autoBtn').textContent=autoDJ?'■ Detener Auto DJ':'▶ Auto DJ';$('autoBtn').classList.toggle('lime',autoDJ);status(autoDJ?'AUTO DJ PRO AUTOMÁTICO':'MODO MANUAL');if(autoDJ)setTimeout(prepareNextAnalysis,500);if(autoDJ){if(current<0||($('folderScope').value!=='all'&&tracks[current]?.folderId!==$('folderScope').value)){const first=scopedIndices()[0];if(first)playTrack(first.i)}else if(decks[activeDeck].paused)decks[activeDeck].play().catch(()=>{});$('mixMessage').textContent='V14.2: analiza temas en segundo plano, busca puntos compatibles y conserva la mezcla normal si no encuentra uno.'}else{proPhraseState=null;clearTransition();if(nodes.length){nodes.forEach((n,i)=>n.gain.gain.value=i===activeDeck?(+$('volume').value/100)*djDeckGain(i):0)}$('mixMessage').textContent='Auto DJ detenido.'}};
+$('playBtn').onclick=()=>{const el=decks[activeDeck];if(current<0){const first=scopedIndices()[0];return first&&playTrack(first.i)}if(el.paused){audioGraph();if(ctx&&ctx.state==='suspended')ctx.resume();el.play().then(()=>$('playBtn').textContent='⏸ Pausa')}else{el.pause();$('playBtn').textContent='▶ Play'}};
+$('prevBtn').onclick=()=>{if(current<0)return;if(decks[activeDeck].currentTime>4){decks[activeDeck].currentTime=0;return}playTrack(current-1)};$('nextBtn').onclick=()=>{if(current<0){const first=scopedIndices()[0];return first&&playTrack(first.i)}if(transition||preparingMix){$('mixMessage').textContent='Ya se está mezclando el siguiente tema.';return}if(scopedIndices().length<2){$('mixMessage').textContent='Necesitás dos temas para mezclar.';return}if(decks[activeDeck].paused){const next=nextIndex();if(next>=0)playTrack(next);return}startCrossfade(true)};
+$('fade').oninput=e=>{$('fadeText').textContent=e.target.value+' s';renderDecision()};$('volume').oninput=e=>{$('volumeText').textContent=e.target.value+'%';if(!transition)setVolume()};$('bass').oninput=e=>{$('bassText').textContent=e.target.value+' dB';updateEQ()};$('treble').oninput=e=>{$('trebleText').textContent=e.target.value+' dB';updateEQ()};$('padVol').oninput=e=>$('padVolText').textContent=e.target.value+'%';$('repeat').onchange=e=>decks[activeDeck].loop=e.target.checked;
+$('cutStart').oninput=updateCutLabels;$('cutEnd').oninput=updateCutLabels;$('cutEnabled').onchange=updateCutLabels;$('markCutStart').onclick=()=>{if(current>=0){$('cutStart').value=decks[activeDeck].currentTime;updateCutLabels()}};$('markCutEnd').onclick=()=>{if(current>=0){$('cutEnd').value=decks[activeDeck].currentTime;updateCutLabels()}};$('clearCut').onclick=()=>{if(current>=0){$('cutStart').value=0;$('cutEnd').value=0;$('cutEnabled').checked=false;updateCutLabels()}};
+$('loopStart').oninput=updateLoopLabels;$('loopEnd').oninput=updateLoopLabels;$('setStart').onclick=()=>{if(current>=0){let t=decks[activeDeck].currentTime;const bpm=tracks[current]?.bpm;if($('beatLoop').checked&&bpm){const beat=60/bpm;t=Math.round(t/beat)*beat}$('loopStart').value=t;updateLoopLabels()}};$('setEnd').onclick=()=>{if(current>=0){let t=Math.max(decks[activeDeck].currentTime,+$('loopStart').value+.1);const bpm=tracks[current]?.bpm;if($('beatLoop').checked&&bpm){const beat=60/bpm;t=Math.round(t/beat)*beat} $('loopEnd').value=t;updateLoopLabels()}};$('loopBtn').onclick=()=>{if(current<0)return;loopOn=true;loopA=+$('loopStart').value;loopB=+$('loopEnd').value;if(loopB<=loopA){loopB=loopA+1;$('loopEnd').value=loopB;updateLoopLabels()}decks[activeDeck].currentTime=loopA;$('loopBtn').textContent='⟲ Loop activo';$('mixMessage').textContent=`Repitiendo sección ${fmt(loopA)}–${fmt(loopB)}.`};$('loopOff').onclick=()=>{loopOn=false;$('loopBtn').textContent='⟲ Activar loop'};$('clearHistory').onclick=()=>{historyList=[];try{localStorage.removeItem('autodj-history')}catch(e){}renderHistory()};
+document.querySelectorAll('.pad').forEach(b=>b.addEventListener('click',()=>{synth(b.dataset.sound);b.classList.add('on');setTimeout(()=>b.classList.remove('on'),140)}));
+decks.forEach((el,index)=>{
+ el.addEventListener('loadedmetadata',()=>{const isActive=index===activeDeck;if(isActive){$('duration').textContent=fmt(el.duration);const t=tracks[current];if(t)t.duration=el.duration;renderTracks()}});
+ el.addEventListener('timeupdate',()=>{if(index!==activeDeck&&!transition)return;if(index===activeDeck){$('elapsed').textContent=fmt(el.currentTime);$('duration').textContent=fmt(el.duration);$('progress').style.width=(el.duration?el.currentTime/el.duration*100:0)+'%';if(loopOn&&el.currentTime>=loopB)el.currentTime=loopA;else if(!$('hardCutMode').checked)maybeSafeRemix(index,el);proMaybeCut(el);const activeTrack=tracks[current];if(index===activeDeck&&activeTrack&&activeTrack.cutEnabled&&activeTrack.cutEnd>activeTrack.cutStart&&el.currentTime>=activeTrack.cutStart&&el.currentTime<activeTrack.cutEnd){el.currentTime=activeTrack.cutEnd+0.05;}if(autoDJ&&!transition&&!preparingMix&&scopedIndices().length>1&&(!proPhraseState?.ready||el.duration-el.currentTime<2.5)&&el.duration-el.currentTime<=Math.max(2.5,(()=>{const a=tracks[current],b=tracks[nextIndex()],cfg=adaptiveMixSettings(a,b);return cfg.early??phraseAwareStart(a,el.duration,cfg.fade)})())&&Date.now()-lastAutoAdvance>5000){lastAutoAdvance=Date.now();proPhraseState=null;startCrossfade()}}});
+ el.addEventListener('ended',()=>{if(index!==activeDeck)return;if(transition)return;if(loopOn){el.currentTime=loopA;el.play().catch(()=>{});return}if($('repeat').checked){el.currentTime=0;el.play().catch(()=>{});return}if(autoDJ){if(scopedIndices().length>1&&nextIndex()>=0)playTrack(nextIndex());else{autoDJ=false;$('autoBtn').textContent='▶ Auto DJ';status('SESIÓN TERMINADA')}}else status('TEMA TERMINADO')});
+});
+setInterval(()=>{if(autoDJ&&!transition&&!preparingMix&&current>=0){if(!proPhraseState)prepareIncomingDeck();proAnalyzeCandidates()}},2200);
+try{historyList=JSON.parse(localStorage.getItem('autodj-history')||'[]')}catch(e){historyList=[]}renderHistory();updateLoopLabels();renderUpcoming();
+
+/* V15: explorador Drive independiente; no modifica tracks, decks ni Organic Mix. */
+const DRIVE_OAUTH_CLIENT='550271756846-14mdr0940u2i7nqlji53ueu2s3i17eq3.apps.googleusercontent.com';
+const DRIVE_SCOPE='https://www.googleapis.com/auth/drive.readonly';
+let driveToken='',driveTokenClient=null,driveFolder='root',driveTrail=[],drivePage='',driveLoading=false,drivePreviewUrl='',driveView='mine',driveAutoBusy=false,driveAutoSession=null,driveAutoTimer=null;
+const driveAudioTypes=/\.(mp3|m4a|aac|wav|flac|ogg|oga|opus|webm)$/i;
+function driveMsg(s){$('driveStatus').textContent=s}
+function driveButtons(connected){$('driveConnect').disabled=connected;$('driveDisconnect').disabled=!connected;$('driveRoot').disabled=!connected;$('driveShared').disabled=!connected;$('driveBack').disabled=!connected||!driveTrail.length;$('driveAutoImport').disabled=!connected||driveAutoBusy}
+function driveEscape(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function driveLoadIdentity(){return new Promise((resolve,reject)=>{if(window.google?.accounts?.oauth2){resolve();return}const script=document.createElement('script');script.src='https://accounts.google.com/gsi/client';script.async=true;script.onload=resolve;script.onerror=()=>reject(new Error('No se pudo cargar el inicio de sesión de Google'));document.head.appendChild(script)})}
+async function driveFetch(url,options={}){
+ if(!driveToken)throw new Error('La sesión de Drive venció. Volvé a conectar.');
+ const r=await fetch(url,{...options,headers:{...(options.headers||{}),Authorization:'Bearer '+driveToken}});
+ if(!r.ok){if(r.status===401){driveToken='';driveButtons(false)}let detail='';try{const e=await r.json();detail=e.error?.message||''}catch(e){}throw new Error('Drive HTTP '+r.status+(detail?' · '+detail:''))}
+ return r;
+}
+function driveQuery(folder,page){
+ const q="trashed = false and '"+folder.replace(/'/g,"\\'")+"' in parents";
+ const actualQ=(driveView==='shared'&&folder==='root')?'trashed = false and sharedWithMe = true':q;
+ const params=new URLSearchParams({q:actualQ,fields:'nextPageToken,files(id,name,mimeType,size)',pageSize:'100',orderBy:'folder,name',spaces:'drive'});
+ if(page)params.set('pageToken',page);
+ return 'https://www.googleapis.com/drive/v3/files?'+params.toString();
+}
+async function driveList(more=false){
+ if(driveLoading)return;driveLoading=true;$('driveMore').disabled=true;
+ if(!more){$('driveItems').replaceChildren();drivePage=''}
+ driveMsg('Leyendo carpeta de Drive…');
+ try{
+  const response=await driveFetch(driveQuery(driveFolder,more?drivePage:''));const data=await response.json();
+  const items=(data.files||[]).filter(f=>f.mimeType==='application/vnd.google-apps.folder'||f.mimeType.startsWith('audio/')||driveAudioTypes.test(f.name));
+  for(const f of items){
+   const isFolder=f.mimeType==='application/vnd.google-apps.folder';
+   const row=document.createElement('div');row.className='trackrow';
+   const ico=document.createElement('span');ico.textContent=isFolder?'📁':'🎵';
+   const info=document.createElement('div');info.style.minWidth='0';
+   const name=document.createElement('div');name.className='trackname';name.textContent=f.name;
+   const sub=document.createElement('div');sub.className='trackmeta';sub.textContent=isFolder?'Abrir carpeta':(f.size?Math.round(Number(f.size)/1048576)+' MB · ':'')+'Audio de Drive';info.append(name,sub);
+   const btn=document.createElement('button');btn.className='btn tinybtn';btn.textContent=isFolder?'Abrir':'▶ Escuchar';
+   btn.onclick=()=>{if(isFolder){driveTrail.push({id:driveFolder,name:$('drivePath').textContent});driveFolder=f.id;$('drivePath').textContent=f.name;driveButtons(true);driveList()}else drivePreview(f)};
+   row.append(ico,info,btn);$('driveItems').appendChild(row);
+  }
+  drivePage=data.nextPageToken||'';$('driveMore').hidden=!drivePage;
+  if(!$('driveItems').children.length)$('driveItems').innerHTML='<div class="empty">No hay carpetas ni archivos de audio compatibles en esta ubicación.</div>';
+  driveMsg('Carpeta cargada. '+$('driveItems').children.length+' elementos visibles'+(drivePage?' · hay más páginas':'')+'.');
+ }catch(e){driveMsg('Error: '+e.message);if(!$('driveItems').children.length)$('driveItems').innerHTML='<div class="empty">No se pudo consultar Drive. Revisá permisos y conexión.</div>'}
+ finally{driveLoading=false;$('driveMore').disabled=false}
+}
+async function drivePreview(file){
+ const audio=$('drivePreview');const info=$('drivePreviewInfo');audio.pause();audio.removeAttribute('src');audio.load();
+ if(drivePreviewUrl){URL.revokeObjectURL(drivePreviewUrl);drivePreviewUrl=''}
+ info.textContent='Preparando «'+file.name+'» desde Drive…';
+ try{
+  const r=await driveFetch('https://www.googleapis.com/drive/v3/files/'+encodeURIComponent(file.id)+'?alt=media');
+  const blob=await r.blob();if(blob.size>150*1024*1024)throw new Error('Archivo demasiado grande para la escucha de prueba');
+  drivePreviewUrl=URL.createObjectURL(blob);audio.src=drivePreviewUrl;
+  await audio.play();info.textContent='Escuchando: '+file.name+' · reproducción individual (todavía no Organic Mix).';
+ }catch(e){info.textContent='No se pudo reproducir: '+e.message+' (puede ser un formato no compatible con Chrome).'}
+}
+$('driveConnect').onclick=async()=>{
+ try{
+  driveMsg('Abriendo autorización de Google…');await driveLoadIdentity();
+  driveTokenClient=google.accounts.oauth2.initTokenClient({client_id:DRIVE_OAUTH_CLIENT,scope:DRIVE_SCOPE,callback:async response=>{
+   if(response.error||!response.access_token){driveMsg('Google no autorizó la conexión: '+(response.error||'sin token'));return}
+   driveToken=response.access_token;driveView='mine';driveTrail=[];driveFolder='root';$('drivePath').textContent='Mi unidad';driveButtons(true);await driveList();
+  },error_callback:e=>driveMsg('No se pudo abrir Google: '+(e.message||e.type||'error'))});
+  driveTokenClient.requestAccessToken({prompt:'select_account consent'});
+ }catch(e){driveMsg('Error: '+e.message)}
+};
+$('driveDisconnect').onclick=()=>{if(driveToken&&window.google?.accounts?.oauth2)google.accounts.oauth2.revoke(driveToken,()=>{});driveToken='';driveView='mine';driveTrail=[];drivePage='';$('driveItems').innerHTML='<div class="empty">Drive desconectado.</div>';$('driveMore').hidden=true;$('drivePreview').pause();$('drivePreview').removeAttribute('src');if(drivePreviewUrl)URL.revokeObjectURL(drivePreviewUrl);drivePreviewUrl='';driveButtons(false);driveMsg('Desconectado.')};
+$('driveBack').onclick=()=>{const prev=driveTrail.pop();if(!prev)return;driveFolder=prev.id;$('drivePath').textContent=prev.name;driveButtons(true);driveList()};
+$('driveRoot').onclick=()=>{driveView='mine';driveTrail=[];driveFolder='root';$('drivePath').textContent='Mi unidad';driveButtons(true);driveList()};
+$('driveShared').onclick=()=>{driveView='shared';driveTrail=[];driveFolder='root';$('drivePath').textContent='Compartido conmigo';driveButtons(true);driveList()};
+$('driveMore').onclick=()=>driveList(true);
+
+// V15.5: carga paginada de Drive. No altera el motor de mezcla.
+const DRIVE_BATCH=15, DRIVE_MAX_BYTES=180*1048576;
+// Nunca liberar un archivo que siga sonando, esté preparado o tenga una transición pendiente.
+function driveReleasePlayed(){
+ const job=driveAutoSession;
+ if(!job||transition||preparingMix||preparationTimer||current<0)return 0;
+ const protectedTracks=new Set([tracks[current],requestedNextTrack,tracks[preparedTrack]]);
+ for(const deck of decks){
+  if(deck.src){const t=tracks.find(x=>x.url===deck.src);if(t)protectedTracks.add(t)}
+ }
+ let removed=0;
+ for(let i=tracks.length-1;i>=0;i--){
+  const t=tracks[i];
+  if(!t.driveTemporary||t.folderId!==job.folderId||!sessionPlayed.includes(t)||protectedTracks.has(t))continue;
+  tracks.splice(i,1);if(i<current)current--;if(i<preparedTrack)preparedTrack--;
+  try{URL.revokeObjectURL(t.url)}catch(e){}
+  removed++;
+ }
+ if(removed){renderTracks();renderUpcoming();}
+ return removed;
+}
+function driveRemaining(){const job=driveAutoSession;return job?tracks.filter(t=>t.folderId===job.folderId&&!sessionPlayed.includes(t)).length:0}
+
+async function driveAutoBatch(){
+ const job=driveAutoSession;
+ if(!job||driveAutoBusy||!driveToken||job.finished)return;
+ driveAutoBusy=true;driveButtons(true);
+ let added=0,bytes=0,scanned=0;
+ const batchLimit=job.total===0?DRIVE_BATCH:1;
+ const existing=job.seen;
+ const active=tracks[current]||null;
+ try{
+  while(added<batchLimit&&bytes<DRIVE_MAX_BYTES&&!job.finished){
+   if(!job.queue.length){
+    const response=await driveFetch(driveQuery(job.driveId,job.page));
+    const data=await response.json();
+    job.queue=(data.files||[]).filter(f=>f.mimeType!=='application/vnd.google-apps.folder'&&(f.mimeType?.startsWith('audio/')||driveAudioTypes.test(f.name)));
+    job.page=data.nextPageToken||'';
+    if(!job.queue.length&&!job.page){job.finished=true;break}
+    if(!job.queue.length)continue;
+   }
+   const item=job.queue.shift();scanned++;
+   if(existing.has(item.id))continue;
+   const size=Number(item.size)||0;
+   if(size>75*1048576)continue;
+   if(bytes+size>DRIVE_MAX_BYTES&&added) {job.queue.unshift(item);break}
+   $('driveAutoInfo').textContent=`☁️ Preparando ${added+1}/${DRIVE_BATCH}: ${item.name}…`;
+   const response=await driveFetch('https://www.googleapis.com/drive/v3/files/'+encodeURIComponent(item.id)+'?alt=media');
+   const blob=await response.blob();
+   if(blob.size>75*1048576||bytes+blob.size>DRIVE_MAX_BYTES)continue;
+   const file=new File([blob],item.name,{type:blob.type||item.mimeType||'audio/mpeg'});
+   tracks.push({folderId:job.folderId,folderName:'☁️ '+job.label,name:item.name,file,size:file.size,url:URL.createObjectURL(file),duration:0,bpm:null,analysis:'Pendiente',genre:detectGenre(job.label+' '+item.name),energy:null,driveId:item.id,driveTemporary:true});
+   bytes+=blob.size;added++;job.total++;existing.add(item.id);
+   if(!job.queue.length&&!job.page)job.finished=true;
+  }
+  if(!job.queue.length&&!job.page)job.finished=true;
+  // No reordenar la biblioteca durante la reproducción: los decks usan índices.
+  if(active)current=tracks.indexOf(active);
+  refreshFolderScope(job.folderId);renderTracks();
+  $('driveAutoInfo').textContent=`☁️ ${job.total} temas cargados en esta sesión. ${job.finished?'Carpeta recorrida.':'Reposición automática activada.'} Elegí ▶ y activá Auto DJ.`;
+  driveMsg(added?`Se sumaron ${added} temas para Organic Mix.`:'No hay más temas nuevos en este lote.');
+ }catch(e){
+  $('driveAutoInfo').textContent=`Drive: ${e.message}. Los temas cargados siguen disponibles.`;
+ }finally{driveAutoBusy=false;driveButtons(!!driveToken)}
+}
+$('driveAutoImport').onclick=async()=>{
+ if(driveAutoBusy||!driveToken)return;
+ if(driveFolder==='root'){$('driveAutoInfo').textContent='Primero abrí una carpeta con canciones.';return}
+ const label=$('drivePath').textContent.trim()||'Drive';
+ driveAutoSession={driveId:driveFolder,folderId:'drive-temp-'+driveFolder,label,page:'',queue:[],total:0,finished:false,seen:new Set()};
+ await driveAutoBatch();
+};
+// Cada canción completada habilita la limpieza y la precarga del siguiente tema.
+// Mantener al menos 5 temas inéditos preparados, sin esperar a que termine el lote.
+driveAutoTimer=setInterval(()=>{
+ const job=driveAutoSession;
+ if(!job||!driveToken||!autoDJ||driveAutoBusy)return;
+ if($('folderScope').value!==job.folderId)return;
+ if(transition||preparingMix)return;
+ const removed=driveReleasePlayed();
+ if(removed)$('driveAutoInfo').textContent=`♻️ Liberados ${removed} temas ya escuchados. ${driveRemaining()} preparados.`;
+ if(!job.finished&&driveRemaining()<5)driveAutoBatch();
+},3000);
+
+
+</script>
+<div id="djBuildStamp" style="position:fixed;bottom:3px;right:6px;z-index:9999;font:11px system-ui;color:#89a0ae;background:#08101bdc;padding:3px 7px;border-radius:7px;pointer-events:none">DJ SUAREZ · V15.5 DRIVE · MEMORIA INTELIGENTE</div>
+<script>
+/* APK: mantiene la pantalla encendida mientras la app está abierta, para que el audio no se corte solo */
+(function(){let lock=null;async function req(){try{if('wakeLock' in navigator&&!lock){lock=await navigator.wakeLock.request('screen');lock.addEventListener('release',function(){lock=null})}}catch(e){}}
+document.addEventListener('click',req);document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')req()});})();
+</script>
+</body></html>
