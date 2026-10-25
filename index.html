@@ -1079,10 +1079,19 @@ $('recBtn').onclick=async()=>{
    const rec=new MediaRecorder(recordDest.stream,options);recording=rec;recordStarted=Date.now();
    rec.ondataavailable=e=>{if(e.data&&e.data.size)recordingChunks.push(e.data)};
    rec.onerror=()=>updateRecInfo('Error de grabación. Verificá el espacio disponible.');
-   rec.onstop=()=>{
+   rec.onstop=async()=>{
      const mime=rec.mimeType||'audio/webm';const blob=new Blob(recordingChunks,{type:mime});
      recordingChunks=[];recording=null;$('recBtn').disabled=false;$('recBtn').textContent='⏺ Grabar mezcla';
      if(!blob.size){updateRecInfo('No se grabó audio. Iniciá la reproducción antes de grabar.');return}
+     if(window.Capacitor?.isNativePlatform?.() && window.DJSuarezSaveRecording){
+       try {
+         updateRecInfo('Guardando mezcla en Android…');
+         const filename='DJ-SUAREZ-Mezcla-'+new Date().toISOString().replace(/[:.]/g,'-')+'.webm';
+         await window.DJSuarezSaveRecording(blob,filename);
+         updateRecInfo('Mezcla guardada ('+Math.round(blob.size/1024)+' KB). Podés compartirla desde Android.');
+       } catch(e) {updateRecInfo('No se pudo guardar la mezcla: '+(e.message||e));}
+       return;
+     }
      const url=URL.createObjectURL(blob),a=document.createElement('a');
      a.href=url;a.download='AutoDJ_Mezcla_'+new Date().toISOString().replace(/[:.]/g,'-')+'.webm';document.body.appendChild(a);a.click();a.remove();
      setTimeout(()=>URL.revokeObjectURL(url),60000);
