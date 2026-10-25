@@ -30,8 +30,10 @@ jobs:
           mkdir -p www
           cp index.html www/index.html
           npm init -y
-          npm install @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6
-          echo '{"appId":"com.djsuarez.app","appName":"DJ Suarez","webDir":"www","server":{"androidScheme":"https"}}' > capacitor.config.json
+          npm install @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6 @codetrix-studio/capacitor-google-auth@3.4.0
+          npm install --no-save esbuild
+          npx esbuild native-drive-entry.js --bundle --platform=browser --format=iife --outfile=www/native-drive.js
+          echo '{"appId":"com.djsuarez.app","appName":"DJ Suarez","webDir":"www","server":{"androidScheme":"https"},"plugins":{"GoogleAuth":{"clientId":"550271756846-14mdr0940u2i7nqlji53ueu2s3i17eq3.apps.googleusercontent.com","scopes":["https://www.googleapis.com/auth/drive.readonly","email","profile"]}}}' > capacitor.config.json
           npx cap add android
           npx cap sync android
 
