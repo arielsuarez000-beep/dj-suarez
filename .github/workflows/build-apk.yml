@@ -1,3 +1,4 @@
+
 name: Compilar APK
 
 on:
@@ -8,8 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Descargar el repositorio
+      - name: Descargar repositorio
         uses: actions/checkout@v4
 
       - name: Node 20
@@ -23,7 +25,7 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Preparar proyecto Capacitor
+      - name: Preparar Capacitor
         run: |
           mkdir -p www
           cp index.html www/index.html
@@ -33,19 +35,49 @@ jobs:
           npx cap add android
           npx cap sync android
 
+      - name: Restaurar firma permanente
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+        run: |
+          set -e
+          printf '%s' "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/dj-suarez.jks"
+          test -s "$RUNNER_TEMP/dj-suarez.jks"
+
       - name: Compilar APK
         working-directory: android
         run: |
           chmod +x gradlew
           ./gradlew assembleDebug
-          
-      - name: Mostrar SHA-1 de la APK
+
+      - name: Firmar APK permanente
+        env:
+          STORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          keytool -printcert -jarfile android/app/build/outputs/apk/debug/app-debug.apk
-          
+          set -e
+
+          APK_IN="android/app/build/outputs/apk/debug/app-debug.apk"
+          APK_OUT="android/app/build/outputs/apk/debug/DJ-Suarez.apk"
+
+          APKSIGNER="$ANDROID_HOME/build-tools/$(ls "$ANDROID_HOME/build-tools" | sort -V | tail -1)/apksigner"
+
+          "$APKSIGNER" sign \
+            --ks "$RUNNER_TEMP/dj-suarez.jks" \
+            --ks-key-alias "$KEY_ALIAS" \
+            --ks-pass env:STORE_PASSWORD \
+            --key-pass env:KEY_PASSWORD \
+            --out "$APK_OUT" \
+            "$APK_IN"
+
+          "$APKSIGNER" verify --verbose --print-certs "$APK_OUT"
+
+      - name: Mostrar SHA-1 permanente
+        run: |
+          keytool -printcert -jarfile android/app/build/outputs/apk/debug/DJ-Suarez.apk
+
       - name: Guardar APK
         uses: actions/upload-artifact@v4
         with:
           name: DJ-Suarez-APK
-          path: android/app/build/outputs/apk/debug/app-debug.apk
-          
+          path: android/app/build/outputs/apk/debug/DJ-Suarez.apk
