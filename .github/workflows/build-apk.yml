@@ -38,7 +38,11 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew assembleDebug
-
+          
+      - name: Mostrar SHA-1 de la APK
+        run: |
+          keytool -printcert -jarfile android/app/build/outputs/apk/debug/app-debug.apk
+          
       - name: Guardar APK
         uses: actions/upload-artifact@v4
         with:
