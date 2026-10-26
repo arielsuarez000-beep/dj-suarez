@@ -1147,6 +1147,8 @@ $('structurePreviewBtn').onclick=async()=>{
  // Marcar cambios de intensidad cercanos; solo informativo, sin afectar AutoDJ.
  const changes=[];
  for(let i=1;i<groups.length;i++){if(groups[i].level!==groups[i-1].level)changes.push(groups[i].start)}
+ // El formateador debe existir ANTES de usarse en el análisis detallado.
+ const fmtTime=v=>Math.floor(v/60)+':'+String(Math.floor(v%60)).padStart(2,'0');
  // Análisis detallado opcional: detectar cambios de dinámica y golpes por ventanas de 4 s.
  let detail='';
  try{
@@ -1166,8 +1168,7 @@ $('structurePreviewBtn').onclick=async()=>{
    if((dyn>.28||beats>.045)&&(!candidates.length||values[i].time-candidates[candidates.length-1]>12))candidates.push(values[i].time);
   }
   detail=' · Posibles cambios de ritmo o instrumentos: '+(candidates.length?candidates.slice(0,12).map(fmtTime).join(', '):'no identificados');
- }catch(e){detail=' · Análisis detallado no disponible'};
- const fmtTime=v=>Math.floor(v/60)+':'+String(Math.floor(v%60)).padStart(2,'0');
+ }catch(e){console.warn('Análisis detallado:',e);detail=' · Análisis detallado no disponible para este archivo'};
  info.textContent='🧠 '+t.name+' · '+groups.slice(0,16).map(x=>fmtTime(x.start)+'–'+fmtTime(x.end)+' '+x.level).join(' · ')+(groups.length>16?' · …':'')+'. Cambios de intensidad: '+(changes.length?changes.slice(0,10).map(fmtTime).join(', '):'no detectados')+detail+'. Son estimaciones de audio, no detección confirmada de instrumentos, voces ni estribillos.';
 };
 $('eqPro').onchange=()=>{$('eqProState').textContent=$('eqPro').checked?'Activado':'Desactivado';};
