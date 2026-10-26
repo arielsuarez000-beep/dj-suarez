@@ -1147,8 +1147,28 @@ $('structurePreviewBtn').onclick=async()=>{
  // Marcar cambios de intensidad cercanos; solo informativo, sin afectar AutoDJ.
  const changes=[];
  for(let i=1;i<groups.length;i++){if(groups[i].level!==groups[i-1].level)changes.push(groups[i].start)}
+ // Análisis detallado opcional: detectar cambios de dinámica y golpes por ventanas de 4 s.
+ let detail='';
+ try{
+  const ab=await t.file.arrayBuffer(),audio=await ctx.decodeAudioData(ab.slice(0));
+  const samples=audio.getChannelData(0),sr=audio.sampleRate,hop=Math.max(1,Math.floor(sr/200));
+  const frame=Math.max(1,Math.floor(sr*4/hop)),values=[];
+  for(let start=0;start<samples.length;start+=frame*hop){
+   let sum=0,transients=0,prev=0,count=0;
+   for(let j=start;j<Math.min(samples.length,start+frame*hop);j+=hop){const v=Math.abs(samples[j]);sum+=v*v;if(v>prev*2.3&&v>.12)transients++;prev=prev*.7+v*.3;count++}
+   values.push({time:start/sr,energy:Math.sqrt(sum/Math.max(1,count)),transients:transients/Math.max(1,count)});
+  }
+  const candidates=[];
+  for(let i=2;i<values.length-1;i++){
+   const prev=(values[i-1].energy+values[i-2].energy)/2,now=(values[i].energy+values[i+1].energy)/2;
+   const dyn=Math.abs(now-prev)/Math.max(.015,prev);
+   const beats=Math.abs(values[i].transients-values[i-1].transients);
+   if((dyn>.28||beats>.045)&&(!candidates.length||values[i].time-candidates[candidates.length-1]>12))candidates.push(values[i].time);
+  }
+  detail=' · Posibles cambios de ritmo o instrumentos: '+(candidates.length?candidates.slice(0,12).map(fmtTime).join(', '):'no identificados');
+ }catch(e){detail=' · Análisis detallado no disponible'};
  const fmtTime=v=>Math.floor(v/60)+':'+String(Math.floor(v%60)).padStart(2,'0');
- info.textContent='🧠 '+t.name+' · '+groups.slice(0,16).map(x=>fmtTime(x.start)+'–'+fmtTime(x.end)+' '+x.level).join(' · ')+(groups.length>16?' · …':'')+'. Cambios de intensidad: '+(changes.length?changes.slice(0,10).map(fmtTime).join(', '):'no detectados')+'. Son estimaciones por volumen; todavía no detecta instrumentos, voces ni estribillos.';
+ info.textContent='🧠 '+t.name+' · '+groups.slice(0,16).map(x=>fmtTime(x.start)+'–'+fmtTime(x.end)+' '+x.level).join(' · ')+(groups.length>16?' · …':'')+'. Cambios de intensidad: '+(changes.length?changes.slice(0,10).map(fmtTime).join(', '):'no detectados')+detail+'. Son estimaciones de audio, no detección confirmada de instrumentos, voces ni estribillos.';
 };
 $('eqPro').onchange=()=>{$('eqProState').textContent=$('eqPro').checked?'Activado':'Desactivado';};
 $('autoEQ').onchange=()=>{if(!$('autoEQ').checked)resetToneEQ();renderDecision()};
