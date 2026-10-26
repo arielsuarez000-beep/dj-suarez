@@ -37,6 +37,20 @@
 <script>
 const $=id=>document.getElementById(id);
 const decks=[$('audio'),$('audio2')];
+ // Mantener servicio Android mientras cualquiera de los dos decks reproduce.
+ let nativePlaybackActive=false;
+ function syncNativePlayback(){
+  const playing=decks.some(d=>!d.paused&&!d.ended);
+  if(playing===nativePlaybackActive)return;
+  nativePlaybackActive=playing;
+  try{window.DJNativePlayback?.setPlaying(playing)}catch(e){console.warn('Servicio Android',e)}
+ }
+ decks.forEach(d=>['play','pause','ended'].forEach(event=>d.addEventListener(event,()=>setTimeout(syncNativePlayback,0))));
+ document.addEventListener('visibilitychange',()=>{
+  if(document.visibilityState==='visible'&&ctx?.state==='suspended'&&decks.some(d=>!d.paused))ctx.resume().catch(()=>{});
+  syncNativePlayback();
+ });
+
 let tracks=[], current=-1, autoDJ=false, loopOn=false, loopA=0, loopB=8, historyList=[], loadingLibrary=false, sessionPlayed=[];
 let folderSerial=0;
 let requestedNextTrack=null;
