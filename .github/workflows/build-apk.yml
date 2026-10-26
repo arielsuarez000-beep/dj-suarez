@@ -36,6 +36,7 @@ jobs:
           echo '{"appId":"com.djsuarez.app","appName":"DJ Suarez","webDir":"www","server":{"androidScheme":"https"},"plugins":{"GoogleAuth":{"clientId":"550271756846-14mdr0940u2i7nqlji53ueu2s3i17eq3.apps.googleusercontent.com","scopes":["https://www.googleapis.com/auth/drive.readonly","email","profile"]}}}' > capacitor.config.json
           npx cap add android
           npx cap sync android
+          python3 setup-background.py
 
       - name: Restaurar firma permanente
         env:
