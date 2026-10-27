@@ -1270,10 +1270,52 @@ function driveMsg(s){$('driveStatus').textContent=s}
 function driveButtons(connected){$('driveConnect').disabled=connected;$('driveDisconnect').disabled=!connected;$('driveRoot').disabled=!connected;$('driveShared').disabled=!connected;$('driveBack').disabled=!connected||!driveTrail.length;$('driveAutoImport').disabled=!connected||driveAutoBusy}
 function driveEscape(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function driveLoadIdentity(){return new Promise((resolve,reject)=>{if(window.google?.accounts?.oauth2){resolve();return}const script=document.createElement('script');script.src='https://accounts.google.com/gsi/client';script.async=true;script.onload=resolve;script.onerror=()=>reject(new Error('No se pudo cargar el inicio de sesión de Google'));document.head.appendChild(script)})}
+// Revalidar la sesión de Drive cuando Google devuelve 401, sin borrar la cola de música.
+let driveRenewPromise=null;
+async function driveRenewToken(){
+ if(driveRenewPromise)return driveRenewPromise;
+ driveRenewPromise=(async()=>{
+  if(window.Capacitor?.isNativePlatform?.()){
+   const auth=window.DJSuarezGoogleAuth;
+   if(!auth)throw new Error('No está disponible Google en Android');
+   const user=await auth.signIn();
+   const token=user?.authentication?.accessToken;
+   if(!token)throw new Error('Google no renovó la autorización');
+   driveToken=token;
+   driveButtons(true);
+   return token;
+  }
+  if(!driveTokenClient)throw new Error('Volvé a conectar Google Drive');
+  return await new Promise((resolve,reject)=>{
+   const oldCallback=driveTokenClient.callback;
+   driveTokenClient.callback=(response)=>{
+    driveTokenClient.callback=oldCallback;
+    if(response.error||!response.access_token){reject(new Error('Google no renovó la autorización'));return}
+    driveToken=response.access_token;driveButtons(true);resolve(driveToken);
+   };
+   try{driveTokenClient.requestAccessToken({prompt:''})}catch(e){driveTokenClient.callback=oldCallback;reject(e)}
+  });
+ })().finally(()=>{driveRenewPromise=null});
+ return driveRenewPromise;
+}
 async function driveFetch(url,options={}){
- if(!driveToken)throw new Error('La sesión de Drive venció. Volvé a conectar.');
- const r=await fetch(url,{...options,headers:{...(options.headers||{}),Authorization:'Bearer '+driveToken}});
- if(!r.ok){if(r.status===401){driveToken='';driveButtons(false)}let detail='';try{const e=await r.json();detail=e.error?.message||''}catch(e){}throw new Error('Drive HTTP '+r.status+(detail?' · '+detail:''))}
+ if(!driveToken)await driveRenewToken();
+ const send=()=>fetch(url,{...options,headers:{...(options.headers||{}),Authorization:'Bearer '+driveToken}});
+ let r=await send();
+ if(r.status===401){
+  try{
+   await driveRenewToken();
+   r=await send();
+  }catch(e){
+   driveToken='';driveButtons(false);
+   throw new Error('La sesión de Google venció. Tocá Conectar Google Drive para continuar. '+e.message);
+  }
+ }
+ if(!r.ok){
+  if(r.status===401){driveToken='';driveButtons(false)}
+  let detail='';try{const e=await r.json();detail=e.error?.message||''}catch(e){}
+  throw new Error('Drive HTTP '+r.status+(detail?' · '+detail:''));
+ }
  return r;
 }
 function driveQuery(folder,page){
