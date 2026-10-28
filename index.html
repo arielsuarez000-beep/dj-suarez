@@ -454,14 +454,16 @@ function rankNextIndex(fromIndex=current, played=sessionPlayed, excluded=new Set
  const available=pool.filter(x=>x.i!==fromIndex&&!excluded.has(x.i));
  const cooldown=Math.min(Math.max(0,+$('noRepeat')?.value||10),available.length);
  const recently=played.slice(-cooldown);
- let eligible=available.filter(x=>!played.includes(x.t));
- if(!eligible.length)eligible=available.filter(x=>!recently.includes(x.t));
- // Si se agotaron los temas no repetidos, recuperar el menos reciente.
- if(!eligible.length){
-   const lastPlayed=t=>played.lastIndexOf(t);
-   const oldest=Math.min(...available.map(x=>lastPlayed(x.t)));
-   eligible=available.filter(x=>lastPlayed(x.t)===oldest);
+ // No repetir durante la vuelta: solo reiniciar cuando TODA la carpeta/lista activa fue escuchada.
+ const heard=new Set(played);
+ const unplayed=pool.filter(x=>!heard.has(x.t));
+ let eligible=unplayed.filter(x=>x.i!==fromIndex&&!excluded.has(x.i));
+ if(!unplayed.length){
+   // Nueva vuelta: se puede volver a elegir, pero nunca repetir inmediatamente el tema actual.
+   eligible=available.filter(x=>!recently.includes(x.t));
+   if(!eligible.length)eligible=available;
  }
+ if(!eligible.length)return -1;
  if($('shuffle').checked)return eligible[Math.floor(Math.random()*eligible.length)].i;
  const mode=$('djSelectionMode')?.value||'fiesta';
  const active=tracks[fromIndex];
