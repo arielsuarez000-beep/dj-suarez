@@ -458,8 +458,10 @@ function rankNextIndex(fromIndex=current, played=sessionPlayed, excluded=new Set
  const heard=new Set(played);
  const unplayed=pool.filter(x=>!heard.has(x.t));
  let eligible=unplayed.filter(x=>x.i!==fromIndex&&!excluded.has(x.i));
- if(!unplayed.length){
-   // Nueva vuelta: se puede volver a elegir, pero nunca repetir inmediatamente el tema actual.
+ if(!eligible.length){
+   // Si los temas pendientes están excluidos, elegir entre los permitidos
+   // sin repetir inmediatamente el actual ni detener Auto DJ.
+   // Si no quedan pendientes en la lista, también inicia una nueva vuelta.
    eligible=available.filter(x=>!recently.includes(x.t));
    if(!eligible.length)eligible=available;
  }
