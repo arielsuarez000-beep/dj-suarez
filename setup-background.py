@@ -111,7 +111,7 @@ public class MainActivity extends BridgeActivity {
        enumerate(tree,id,selectedFolderName,0);
        report("ready",new JSONObject().put("count",localUris.size())
          .put("name",selectedFolderName).toString());
-     }catch(Exception e){report("error",new JSONObject().put("message",e.toString()).toString());}
+     }catch(Exception e){report("error", "{\\\"message\\\":"+JSONObject.quote(e.toString())+"}");}
    }).start();
  }
 
