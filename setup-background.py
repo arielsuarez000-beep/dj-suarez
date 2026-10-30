@@ -79,18 +79,38 @@ public class MainActivity extends BridgeActivity {
        if(c!=null&&c.moveToFirst())return c.isNull(0)?-1:c.getLong(0);
      }catch(Exception ignored){}return -1;
    }
-   @JavascriptInterface public String readChunk(int index,long offset,int length){
-     if(index<0||index>=localUris.size()||offset<0||length<1||length>262144)return "";
-     try(InputStream input=getContentResolver().openInputStream(localUris.get(index))){
-       if(input==null)return "";
-       long left=offset;
-       while(left>0){long skipped=input.skip(left);if(skipped>0){left-=skipped;continue;}
-         if(input.read()<0)return "";left--;}
-       byte[] bytes=new byte[length];int size=0;
-       while(size<length){int got=input.read(bytes,size,length-size);if(got<0)break;size+=got;}
-       return Base64.encodeToString(bytes,0,size,Base64.NO_WRAP);
-     }catch(Exception e){return "";}
+   private InputStream activeStream=null;
+   private int activeIndex=-1;
+   private long activeOffset=0;
+   private void closeStream(){
+     if(activeStream!=null)try{activeStream.close();}catch(Exception ignored){}
+     activeStream=null;activeIndex=-1;activeOffset=0;
    }
+   @JavascriptInterface public synchronized String readChunk(int index,long offset,int length){
+     if(index<0||index>=localUris.size()||offset<0||length<1||length>524288)return "";
+     try{
+       if(activeStream==null||activeIndex!=index||activeOffset!=offset){
+         closeStream();
+         activeStream=getContentResolver().openInputStream(localUris.get(index));
+         activeIndex=index;
+         long remaining=offset;
+         while(remaining>0){
+           long skipped=activeStream.skip(remaining);
+           if(skipped>0){remaining-=skipped;continue;}
+           if(activeStream.read()<0){closeStream();return "";}
+           remaining--;
+         }
+         activeOffset=offset;
+       }
+       byte[] bytes=new byte[length];int size=0;
+       while(size<length){int got=activeStream.read(bytes,size,length-size);if(got<0)break;size+=got;}
+       activeOffset+=size;
+       if(size==0)closeStream();
+       return Base64.encodeToString(bytes,0,size,Base64.NO_WRAP);
+     }catch(Exception e){closeStream();return "";}
+   }
+   @JavascriptInterface public synchronized void finishFile(){closeStream();}
+
  }
  @Override protected void onActivityResult(int request,int result,Intent data){
    super.onActivityResult(request,result,data);
