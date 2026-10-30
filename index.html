@@ -1247,7 +1247,7 @@ $('chooseFolder').onclick=()=>{
    $('androidFolderFiles').click();
  }else $('folderInput').click();
 };$('chooseFiles').onclick=()=>$('fileInput').click();
-$('androidFolderFiles').onchange=e=>{const files=e.target.files;if(files?.length){
+$('androidFolderFiles').onchange=e=>{const files=Array.from(e.target.files||[]);if(files.length){
  const name=$('folderNameInput').value.trim();
  if(!name){$('libraryInfo').textContent='Poné primero el nombre de la carpeta (ej. Cumbia) y volvé a seleccionar los temas.';e.target.value='';return;}
  // En Android el selector HTML no abre carpetas enteras de forma confiable.
