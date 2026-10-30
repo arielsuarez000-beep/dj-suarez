@@ -1242,10 +1242,56 @@ showLearnedMix();
 // Ruta segura: selección múltiple de audios y nombre de carpeta en la biblioteca.
 // En escritorio se mantiene el selector original de carpetas.
 const djMobileAndroid=/Android/i.test(navigator.userAgent);
+let nativeFolderBusy=false;
+async function importNativeFolder(meta){
+ if(nativeFolderBusy)return;
+ nativeFolderBusy=true;
+ const button=$('chooseFolder');button.disabled=true;
+ const bridge=window.DJNativeFolder;
+ const folderName=$('folderNameInput').value.trim()||meta.name||'Música local';
+ let imported=0,failed=0;
+ try{
+   for(let base=0;base<meta.count;base+=5){
+     const group=[];
+     for(let i=base;i<Math.min(meta.count,base+5);i++){
+       try{
+         const name=bridge.fileName(i),size=Number(bridge.fileSize(i));
+         if(size<0||size>150*1024*1024){failed++;continue}
+         const parts=[];let offset=0;
+         while(offset<size){
+           const coded=bridge.readChunk(i,offset,Math.min(262144,size-offset));
+           if(!coded)throw Error('Lectura incompleta');
+           const decoded=atob(coded),bytes=new Uint8Array(decoded.length);
+           for(let n=0;n<decoded.length;n++)bytes[n]=decoded.charCodeAt(n);
+           parts.push(bytes);offset+=bytes.length;
+           if(parts.length%8===0)await yieldUI();
+         }
+         group.push(new File(parts,name,{type:'audio/'+(name.split('.').pop().toLowerCase()==='mp3'?'mpeg':'*')}));
+         imported++;
+       }catch(e){failed++;}
+       $('libraryInfo').textContent='Importando carpeta '+folderName+': '+(i+1)+' / '+meta.count+' · '+failed+' errores';
+       await yieldUI();
+     }
+     if(group.length){$('folderNameInput').value=folderName;await addFiles(group,false);}
+   }
+   $('libraryInfo').textContent='Carpeta '+folderName+': '+imported+' audios leídos · '+failed+' errores · '+tracks.length+' temas en biblioteca.';
+ }catch(e){$('libraryInfo').textContent='No se pudo completar la carpeta: '+e.message+' · '+imported+' archivos procesados.';}
+ finally{nativeFolderBusy=false;button.disabled=false;}
+}
+window.DJNativeFolderEvent=(event,data)=>{
+ if(event==='ready'){
+   if(!data.count){$('libraryInfo').textContent='La carpeta elegida no contiene archivos de audio compatibles.';return;}
+   importNativeFolder(data);
+ }else if(event==='cancel')$('libraryInfo').textContent='Selección de carpeta cancelada.';
+ else if(event==='error')$('libraryInfo').textContent='Error al abrir carpeta: '+(data.message||'desconocido');
+};
 $('chooseFolder').onclick=()=>{
- if(loadingLibrary)return;
- if(djMobileAndroid){
-   $('libraryInfo').textContent='Android: seleccioná varios temas con el gestor de archivos. Se guardarán juntos en la carpeta indicada arriba; no se modifica la carpeta original.';
+ if(loadingLibrary||nativeFolderBusy)return;
+ if(djMobileAndroid&&window.DJNativeFolder&&window.DJNativeFolder.chooseFolder){
+   $('libraryInfo').textContent='Elegí una carpeta completa en Android (incluye subcarpetas).';
+   window.DJNativeFolder.chooseFolder();
+ }else if(djMobileAndroid){
+   $('libraryInfo').textContent='Esta APK todavía no tiene el selector nativo. Elegí varias canciones.';
    $('fileInput').click();
  }else $('folderInput').click();
 };
