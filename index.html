@@ -1259,16 +1259,17 @@ async function importNativeFolder(meta){
          if(size<0||size>150*1024*1024){failed++;continue}
          const parts=[];let offset=0;
          while(offset<size){
-           const coded=bridge.readChunk(i,offset,Math.min(262144,size-offset));
+           const coded=bridge.readChunk(i,offset,Math.min(524288,size-offset));
            if(!coded)throw Error('Lectura incompleta');
            const decoded=atob(coded),bytes=new Uint8Array(decoded.length);
            for(let n=0;n<decoded.length;n++)bytes[n]=decoded.charCodeAt(n);
            parts.push(bytes);offset+=bytes.length;
            if(parts.length%8===0)await yieldUI();
          }
+         if(bridge.finishFile)bridge.finishFile();
          group.push(new File(parts,name,{type:'audio/'+(name.split('.').pop().toLowerCase()==='mp3'?'mpeg':'*')}));
          imported++;
-       }catch(e){failed++;}
+       }catch(e){if(bridge.finishFile)bridge.finishFile();failed++;}
        $('libraryInfo').textContent='Importando carpeta '+folderName+': '+(i+1)+' / '+meta.count+' · '+failed+' errores';
        await yieldUI();
      }
